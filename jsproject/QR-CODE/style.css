@@ -1,0 +1,105 @@
+* {
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: Poppins;
+}
+
+html, body {
+height:100%;
+width:100%;
+}
+
+
+body{
+    background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );  
+}
+
+
+#box{
+    background: #ffffff;
+    width: 30vw;
+    padding: 20px 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.heading{
+    font-size: 20px;
+    /* color: #fff; */
+    font-weight: 600;
+    letter-spacing: px;
+    text-align: center;
+}
+
+#inputBox{
+    padding: 15px 20px;
+    width: 80%;
+    /* margin-top: 20px;
+    margin-bottom: 30px; */
+    margin:20px 50px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    outline: none;
+}
+
+
+
+#btn{
+    padding: 15px 20px;
+    width: 80%;
+    background-image: linear-gradient( 72.1deg,  rgba(0,0,128,1) 1.7%, rgba(100,149,237,1) 99.1% );    color: #fff;
+    border-radius: 5px;
+    margin: 20px 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+#qrBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#qrBox img{
+    width: 100%;
+    padding: 10px;
+}
+
+#qrBox.show-img{
+    max-height: 250px;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+
+
+}
+
+
+@media (max-width:768px){
+    #box{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        padding: 15px 10px;
+    }
+
+    .heading{
+        font-size: 20px;
+    }
+    #inputBox{
+        width: 1005;
+    }
+}

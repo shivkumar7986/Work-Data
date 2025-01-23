@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ONBLUR() EVENT</h1>
+    Enter value for a <input type="text" onblur="show()" id="t1" /> <br><br>
+
+    Enter value for b <input type="text" onblur="show1()" id="t2" /> <br><br>
+
+    Result <input type="text" onblur="show2()" id="t3" /><br>
+
+    
+    <script>
+        function show(){
+            t1.value=15;
+        } 
+        function show1(){
+            t2.value=34;
+        }
+        function show2(){
+            t3.value = parseInt(t1.value) * parseInt(t2.value);
+        }
+    </script>
+  </body>
+</html>

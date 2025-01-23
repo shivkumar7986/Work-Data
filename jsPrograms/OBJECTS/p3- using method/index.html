@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>using method in object</h1>
+    <script>
+        let person = {
+            firstName: "shiv",
+            lastName: "kumar",
+            age: 22,
+            fullName: function(){
+                return this.firstName +' ' + this.lastName;
+            }
+        };
+
+        console.log(person);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> USING OBJECT.VALUES()</h1>
+    <div id="p"></div>
+
+    <script>
+        const perosn = {
+            name : "shiv",
+            age : 22,
+            city : "chandigarh"
+        };
+
+        
+        //The Object.values() method in JavaScript is used to return an array of a given object's own enumerable property values. This method is useful when you need to get all the values from an object without knowing its properties.
+        const myArray = Object.values(perosn);
+
+        //display the array
+
+        document.getElementById('p').innerHTML = myArray
+
+        
+
+        
+    </script>
+</body>
+</html>

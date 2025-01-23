@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u> TOTAL MARKS , AVERAGE , GRADES </u></h1>");
+        var hindi = 45;
+        var english = 45;
+        var math = 45;
+        document.write("hindi = " + hindi + "<br>");
+        document.write("english = " + english + "<br>");
+        document.write("math = " + math + "<br>");
+
+        var total = hindi + english + math;
+        document.write("total marks = " + total + "<br>");
+
+        var average = total / 3;
+        document.write("average = " + average + "<br>");
+
+        if(average>= 80){
+            document.write("grade = S <br>" );
+        }
+        else if( average>=60 && average<=80){
+            document.write("grade = A <br>" );
+        }
+        else if(average>=50 && average<=60){
+            document.write("grade = B <br>" );
+        }
+        else{
+            document.write("grade = F <br>" );
+        };
+    </script>
+</body>
+</html>

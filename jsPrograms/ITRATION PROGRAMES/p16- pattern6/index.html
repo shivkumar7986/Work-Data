@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u> PATTERN 7 </u></h1>");
+        var size = 5;
+        var space =4;
+
+        for(let i = 1; i<=size ; i++){
+            for(let j=space; j>0 ; j--){
+                document.write("_");
+            }
+            for(let k= 1; k<=i ; k++){
+                document.write("*");
+            }
+            space-- ;
+            document.write("<br>");
+        }
+           
+    </script>
+</body>
+</html>

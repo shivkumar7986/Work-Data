@@ -1,0 +1,21 @@
+
+<script>
+var a="welcome to first demo there is monkey who looks to jaideep, then another monkey came there and catch the jaideep";
+var i=1;
+function show()
+ {
+   
+   p.innerHTML=a.substring(0,i);
+  
+   i=i+1;
+   if(i>a.length)
+    i=1;
+   setTimeout("show()",100);
+}
+</script>
+
+<body>
+<div id="p" > </div>
+<input type="button" value="submit" onclick="show()" />
+
+</body>

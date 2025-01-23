@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select id="c1" onchange="show()">
+        <option> Writing</option>
+        <option> Music</option>
+        <option> Reading</option>
+        <option> Listening</option>
+    </select>
+
+    <select id="c2">
+        <option >select me</option>
+    </select>
+
+    <script>
+        function show(){
+            var a = c1.selectedIndex;
+            var b = c1[a].text;
+            alert("your selected vlaue = " + b);
+
+            c2.innerHTML="<option>"  + b;
+        }
+    </script>
+</body>
+</html>

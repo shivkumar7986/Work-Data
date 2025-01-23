@@ -1,0 +1,64 @@
+<!--
+ ASSUME THESE ALL ARE ASYNCRONOUSE TASKS
+
+- sabse pehle ghar per jaao
+- gate kholo or gate lagao
+- hana pakao or khana khao
+- or fir so jaao 
+-->
+
+<script>
+    
+    // var a = setTimeout(()=>{
+    //     console.log(" 1 :sabse pehle ghar per jao")
+    // },1000)
+    // var b = setTimeout(()=>{
+    //     console.log("2: gate kholo or gate lagao")
+    // },2000)
+    // var c = setTimeout(()=>{
+    //     console.log("3: khana pakao or khana khao")
+    // },500)
+    // var d = setTimeout(()=>{
+    //     console.log("4: or fir so jaao")
+    // },1000)
+
+
+
+
+    var a1 = new Promise(function(res , rej){
+        return res(setTimeout(()=>{
+        console.log(" 1 :sabse pehle ghar per jao")
+    },1000));
+    })
+
+    var a2 =  a1.then(function(data){
+        console.log(data)
+        return new Promise(function(res, rej){
+            return res(setTimeout(()=>{
+        console.log(" 2 :gate kholo or gate lagao")
+    },2000));
+        })
+    })
+
+    var a3 = a2.then(function(data){
+        console.log(data)
+        return new Promise(function(res, rej){
+            return res(setTimeout(()=>{
+        console.log(" 3 :khana pakao or so jaao")
+    },2500));
+        })
+    })
+
+    var a4 = a3.then(function(data){
+        console.log(data)
+        return new Promise(function(res, rej){
+            return res(setTimeout(()=>{
+        console.log(" 4 : or fir so jaao")
+    },3000));
+        })
+    })
+
+    a4.then(function(data){
+        console.log(data)
+    })
+</script>

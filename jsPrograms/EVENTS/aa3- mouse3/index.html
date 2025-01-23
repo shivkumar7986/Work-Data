@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="a5.jpg" width="300px" height="400px" onmouseover="show()" onmouseout="show1()" onmousedown="show2()" onmouseup="show3()">
+
+    <script>
+        function show(){
+            document.images[0].src="a1.jpg";
+        }
+        function show1(){
+            document.images[0].src="a2.jpg";
+        }
+        function show2(){
+            document.images[0].src="a3.jpg";
+        }
+        function show3(){
+            document.images[0].src="a4.jpg";
+        }
+    </script>
+</body>
+</html>

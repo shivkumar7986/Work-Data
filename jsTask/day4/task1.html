@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- first  second  third these are three button add eventlistner and show message to div -->
+
+
+    <button id="b1">clickMe</button>
+    <button id="b2">clickMe</button>
+    <button id="b3">clickMe</button>
+    
+    <div id="para">
+       </div>
+
+    <script>
+        let btn1 = document.getElementById("b1")
+        let btn2 = document.getElementById("b2")
+        let btn3 = document.getElementById("b3")
+
+        btn1.addEventListener("click", ()=>{
+            document.getElementById("para").innerHTML = "1st button was clicked"
+        })
+
+        btn2.addEventListener("click", ()=>{
+            document.getElementById("para").innerHTML = "2nd button was clicked"
+        })
+
+        btn3.addEventListener("click", ()=>{
+            document.getElementById("para").innerHTML = "3rd button was clicked"
+        })
+
+        
+    </script>
+</body>
+</html>

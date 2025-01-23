@@ -1,0 +1,21 @@
+<script>
+    // replace to with there
+    // replace can replace the first word only . if you want all the matched word replace :
+    // we can use regular /expression/g to operate globally means fully
+    // we can use regular /expression/i to operate caseSensitively 
+    // or replaceAll() method
+
+    var text = "Ramu went to ambala to see cloth market";
+    document.write(text +"<br><br><br>")
+
+
+    var replacedString = text.replace(/to/g , "three");
+    var replacedString1 = text.replaceAll("to" , "three");
+
+    //using regular expression
+    document.write(replacedString +"<br><br>");
+    
+    //using replaceAll() string method
+    document.write(replacedString1 +"<br><br>");
+
+</script>

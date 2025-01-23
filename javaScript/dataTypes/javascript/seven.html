@@ -1,0 +1,22 @@
+<script>
+function show()
+{
+ var a = c1.selectedIndex;
+ var b = c1[a].text;
+alert("your selected value="+b);
+c2.innerHTML ="<option> Select me </option><option>Writing 1<option>Writing 2<option>"+b;
+}
+</script>
+
+
+<select id="c1" onchange="show()">
+<option> Reading </option>
+<option> Writing </option>
+<option> Listening </option>
+<option> Music </option>
+</select>
+
+
+<select id="c2" >
+<option> Select me </option>
+</select>

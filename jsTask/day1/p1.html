@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="userInput"><br><br>
+    <input type="text" id="output"><br><br>
+    &nbsp; &nbsp; <input type="button" value="square" onclick="square()"> &nbsp; &nbsp;
+    <input type="button" value="cube" onclick="cube()">
+
+    <div id="p">
+    </div>
+
+    <script>
+        var num = userInput.value;
+
+        function square(){
+            output.value = userInput.value * userInput.value;
+            output.style.color = "red";
+        }
+
+        function cube(){
+            output.value = userInput.value * userInput.value * userInput.value; 
+            output.style.color = "blue";
+
+        }
+
+    </script>
+</body>
+</html>

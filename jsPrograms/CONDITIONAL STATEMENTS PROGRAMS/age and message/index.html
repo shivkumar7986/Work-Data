@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1><i>PRINT MESSAGE BASED ON AGE </i></h1>");
+      const age = 42;
+      document.write("age of person = " + age + "<br>");
+
+      if (age >= 90) {
+        document.write("person is very old");
+      } else if (age >= 60 && age < 90) {
+        document.write("person is  old");
+      } else if (age >= 50 && age < 60) {
+        document.write("person is still old");
+      } else if (age >= 40 && age < 50) {
+        document.write("person is not old");
+      } else if (age >= 20 && age < 40) {
+        document.write("person is young");
+      } else {
+        document.write("person is a child");
+      }
+    </script>
+  </body>
+</html>

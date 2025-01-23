@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">choose your favroite season</h1>
+
+    <input type="radio" name="btn" id="b1" value="Rainy">Rainy <br>
+    <input type="radio" name="btn" id="b2" value="winter">Winter <br>
+    <input type="radio" name="btn" id="b3" value="summer">Summer <br>
+    <input type="radio" name="btn" id="b4" value="Monsoon">Monsoon <br>
+    <button id="clickBtn">clickMe</button>
+
+    <h3 id="disp" style="color: green;"></h3>
+    <h3 id="error" style="color: red;"></h3>
+
+
+    <script>
+        var clickBtn = document.getElementById("clickBtn");
+        var input1 = document.getElementById("b1")
+        var input2 = document.getElementById("b2")
+        var input3 = document.getElementById("b3")
+        var input4 = document.getElementById("b4")
+
+        var disp = document.getElementById("disp")
+        var error = document.getElementById("error")
+
+        clickBtn.addEventListener("click",()=>{
+            if(input1.checked){
+                disp.innerHTML = `${input1.value} is selected`
+                error.innerHTML=" ";
+            }
+            else if(input2.checked){
+                disp.innerHTML = `${input2.value} is selected`
+                error.innerHTML=" ";
+            }
+            else if(input3.checked){
+                disp.innerHTML = `${input3.value} is selected` 
+                error.innerHTML=" ";
+            }
+            else if(input4.checked){
+                disp.innerHTML = `${input4.value} is selected`
+                error.innerHTML=" ";
+            }
+
+            else {
+                error.innerHTML = "must select the option"
+            }
+        })
+    </script>
+</body>
+</html>

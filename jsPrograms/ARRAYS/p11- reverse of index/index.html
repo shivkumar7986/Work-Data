@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>PRINTING REVERSE OF ARRAY</u></h1>");
+
+        let array = [1,2,3,4,5];
+        document.write("array  = " + array + "<br>");
+        let reverseArray = [];
+        for(let i=array.length ; i>0 ; i--){
+            let idx = array[i-1];
+            reverseArray.push(idx);
+        }
+        document.write("reverse array =" + reverseArray + "<br>");
+    </script>
+</body>
+</html>

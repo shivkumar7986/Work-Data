@@ -1,0 +1,17 @@
+<script>
+function show()
+{
+ var a = c1.selectedIndex;
+ alert(a);
+ var b = c1[a].text;
+alert("your selected value="+b);
+}
+</script>
+
+
+<select id="c1" onchange="show()">
+<option> Reading </option>
+<option> Writing </option>
+<option> Listening </option>
+<option> Music </option>
+</select>

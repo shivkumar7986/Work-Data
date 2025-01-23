@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark  px-5 py-3 fs-4 mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2 text-white" href="/trendingdrips">TrendingDripz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white me-4" href="/treandingdrips/login">Login </a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link text-white" href="/treandingdrips/register">Registor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="h-100 w-100 d-flex align-items-center flex-column">
+        <h2 class="fs-2 text-decoration-underline mb-5">Welcome To Login Page.</h2>
+
+        <div class="w-100 d-flex justify-content-center" >
+            <form action="/trendingdrips/acclogin" method="post" style="padding: 3vw;border-radius: 20px; background-color:#262239; color: #fff; display: flex; flex-direction: column; align-items: center;">
+                <div class="mb-3" > 
+                    <label class="form-label" for="username">Username:</label>
+                    <input class="form-control " type="text" name="username" id="username">
+                </div>
+                
+                <div class="mb-3" > 
+                    <label class="form-label" for="password">Password:</label>
+                    <input class="form-control " type="password" name="password" id="password">
+                </div>
+                <input type="submit" value="Login" class="btn btn-danger px-5 rounded-pill mt-3" >
+                <a href="/treandingdrips/registor" class="link-underline-dark mt-3">New user? , Sign up</a>
+            </form>
+        </div>
+    </div>
+
+    <form class="form" action=""></form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

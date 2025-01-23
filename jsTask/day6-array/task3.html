@@ -1,0 +1,35 @@
+<div id="p">
+
+</div>
+
+<script>
+
+    const numArr = [1,2,3,4,5,6,7,8,9,10];
+    const charArr = ["a","b","c","d","e","f","g","h","i","j"];
+
+    var t = `<table border = "1">`;
+
+    for(let i = 0; i< 2;i++){
+
+        for(let j = 0 ; j< numArr.length; j++){
+            t += `<td style="padding:20px">${numArr[j]} </td>`
+            // t += `<td>${charArr[j]} </td>`
+        }
+        t += `<tr>`
+
+        for(let k = 0 ; k< charArr.length; k++){
+            // t += `<td>${numArr[j]} </td>`
+            t += `<td style="padding:20px">${charArr[k]} </td>`
+        }
+
+        t += `</tr>`
+
+
+     
+       
+       
+    }
+
+    t += `</table>`;
+    p.innerHTML = t
+</script>

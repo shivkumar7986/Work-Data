@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WAP to define different colors in array but change randomly</h1>
+    <div id="p"></div>
+    <input type="button" value="show me" onclick="show()">
+
+    <script>
+        var color = ["red" , "green" , "blue" , "black" , "cyan" , "voilet" , "yellow"];
+
+        function show(){
+            var a = parseInt(Math.random()*color.length);
+            p.innerHTML += "<font color ="+color[a]+ " size=40 >WEB TECHNOLOGY</font><br>";
+            setTimeout("show()", 200);
+            }
+
+        
+    </script>
+</body>
+</html>

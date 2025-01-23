@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+   
+
+    <h1 style="margin: 20px 40%;">-APNA BANK-</h1>
+    <div id="main" style="display: flex; justify-content:space-between ; align-items:center ; background-color:cornsilk  ; padding: 2vw 4vw ; border-radius:20px" >
+        <div id="sec1">
+            <form action="/createuser" method="post">
+             <h1> Create New Account </h1>
+                Account no : <input type="number" name="accno"><br> <br>
+                Customer Name : <input type="text" name="name"><br> <br>
+                Balance : <input type="number" name="balance"> <br> <br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+
+
+
+        <div id="sec2">
+            <form action="/deposit" method="post">
+                <h1>Deposite Cash</h1>
+                Enter Acount_No : <input type="number" name="acn"><br><br>
+                Enter Amount : <input type="number" name="amt"><br><br>
+                <input type="submit" value="submit">
+
+            </form>
+        </div>
+
+        
+
+        <div id="sec3">
+            <form action="/withdrawl" method="post">
+                <h1>Withdraw Cash</h1>
+                Enter Acount_No : <input type="number" name="acn2"><br><br>
+                Enter Amount : <input type="number" name="amt2"><br><br>
+                <input type="submit" value="submit">
+
+            </form>
+        </div>
+
+
+    </div>
+    <br>
+    <br>
+
+
+
+   
+        <a href="/allusers" style="background-color: aquamarine; padding:1vw 3vw ; border-radius:20px ; text-decoration:none ; color:black ; text-transform:uppercase; margin: 20px 40%;">All users</a>
+
+  
+
+
+</body>
+
+</html>

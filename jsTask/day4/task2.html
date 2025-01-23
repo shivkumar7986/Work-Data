@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" style="padding: 30px;">button</button><br>
+    <img id="img" src="" alt="img" height="150px" width="150px" style=" display: none; margin-top: 20px;">
+
+    <div id="para" >
+
+    </div>
+
+
+    <script>
+        var btn = document.getElementById("btn");
+        var img = document.getElementById("img");
+        var para = document.getElementById("para")
+
+        btn.addEventListener("mouseover", ()=>{
+            img.style.display = "block";
+            img.src = "https://i.pinimg.com/originals/a7/ac/f3/a7acf3b7eda70db233c6418cc37fc7fe.jpg"
+            para.innerHTML= "mouseover working👌"
+        })
+        btn.addEventListener("mouseout", ()=>{
+           img.style.display = "none"
+           para.innerHTML= "mouseout working👌"
+        })
+
+        btn.addEventListener("click", ()=>{
+            img.style.display = "block"
+            img.src = "https://i.pinimg.com/originals/02/0e/bf/020ebfae6bf954160799df4311850eea.jpg"
+            para.innerHTML= "click working👌"
+        })
+
+        btn.addEventListener("dblclick", ()=>{
+            img.style.display = "block"
+            img.src = "https://i.pinimg.com/originals/a5/82/08/a5820890a2fd09e81f31b7a4b5de855a.jpg"
+            para.innerHTML= "dblclcik working👌"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <h2 class="text-center my-4 text-uppercase fs-2 fw-semibold text-decoration-underline">Welcome To Legit Store.</h2>
+
+  <div class="container mt-5 bg-secondary p-5 text-light rounded w-50">
+    <h2>Product Information Form</h2>
+    <form action="/addproduct" method="post" enctype="multipart/form-data">
+      <!-- File Input -->
+      <div class="mb-3">
+        <label for="productImage" class="form-label">Choose Product Image</label>
+        <input type="file" class="form-control" id="productImage" name="image" required>
+      </div>
+
+      <!-- Product ID -->
+      <div class="mb-3">
+        <label for="productId" class="form-label">Product ID</label>
+        <input type="text" class="form-control" id="productId" name="productId" placeholder="Enter Product ID" required>
+      </div>
+
+      <!-- Product Name -->
+      <div class="mb-3">
+        <label for="productName" class="form-label">Product Name</label>
+        <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter Product Name"
+          required>
+      </div>
+
+      <!-- Product Price -->
+      <div class="mb-3">
+        <label for="productPrice" class="form-label">Product Price</label>
+        <input type="number" class="form-control" id="productPrice" name="productPrice"
+          placeholder="Enter Product Price" required step="0.01">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <br>
+
+  <div class="container mt-5 ">
+    <h3 class="text-capitalize mb-3">Products: </h3>
+    <table class="table ">
+      <th class=" bg-secondary text-light col">Image</th>
+      <th class=" bg-secondary text-light col">Id</th>
+      <th class=" bg-secondary text-light col">Name</th>
+      <th class=" bg-secondary text-light col">Price</th>
+      <th class=" bg-secondary text-light col">Delete</th>
+      <th class=" bg-secondary text-light col">Edit</th>
+      <% a.forEach(function(i){ %>
+        <tr>
+          <th> <img src="uploads/<%=i.pictures %>" height="50" width="50"> </th>
+          <td>
+            <%= i.id %>
+          </td>
+          <td>
+            <%= i.name %>
+          </td>
+          <td>
+            <%= i.price %>
+          </td>
+          <td><a class="btn btn-danger" href="/deleteprod/<%= i.id %>">Delete</a></td>
+          <td><a class="btn btn-success" href="/editprod/<%= i.id %>">Update</a></td>
+        </tr>
+        <% }) %>
+
+    </table>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

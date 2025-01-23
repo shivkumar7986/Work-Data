@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1><u> NUMBER IS DIVISIBLE BY...</u></h1>");
+      var num = 35;
+      document.write("number = " + num + "<br>");
+      document.write("dividend =  2,3,5 and 7 <br>");
+
+      if (num % 5 == 0 && num % 2 == 0 && num % 7 == 0) {
+        document.write(`number ${num} is divisible by 2,5 and 7`);
+      } else if (num % 3 == 0 && num % 5 == 0 && num % 7 == 0) {
+        document.write(`number ${num} is divisible by 3,5 and 7`);
+      } else if (num % 2 == 0 && num % 3 == 0 && num % 7 == 0) {
+        document.write(`number ${num} is divisible by 2,3 and 7`);
+      } else if (num % 2 == 0 && num % 3 == 0 && num % 5 == 0) {
+        document.write(`number ${num} is divisible by 2,3 and 5`);
+      } else if (num % 5 == 0 && num % 7 == 0) {
+        document.write(`number ${num} is divisible by 5 and 7`);
+      } else if (num % 3 == 0 && num % 7 == 0) {
+        document.write(`number ${num} is divisible by 3 and 7`);
+      } else if (num % 3 == 0 && num % 5 == 0) {
+        document.write(`number ${num} is divisible by 3 and 5`);
+      } else if (num % 2 == 0 && num % 7 == 0) {
+        document.write(`number ${num} is divisible by 2 and 7`);
+      } else if (num % 2 == 0 && num % 5 == 0) {
+        document.write(`number ${num} is divisible by 2 and 5`);
+      } else if (num % 2 == 0 && num % 3 == 0) {
+        document.write(`number ${num} is divisible by 2 and 3`);
+      } else if (num % 7 == 0) {
+        document.write(`number ${num} is divisible by 7`);
+      } else if (num % 5 == 0) {
+        document.write(`number ${num} is divisible by 5`);
+      } else if (num % 3 == 0) {
+        document.write(`number ${num} is divisible by 3`);
+      } else if (num % 2 == 0) {
+        document.write(`number ${num} is divisible by 2`);
+      } else {
+        document.write(`number ${num} is not devide by any dividend`);
+      }
+    </script>
+  </body>
+</html>

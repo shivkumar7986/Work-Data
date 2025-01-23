@@ -1,0 +1,66 @@
+<!-- define object ( Employee )  id,name,salary,designation
+7 employees  
+a) print clerks only
+b) print the sum of salary
+c) print the employees who are earning 
+more than the average salary -->
+
+<script>
+    const empArr = [];
+
+    function employees(id, name, salary, designation) {
+        this.id = id,
+            this.name = name,
+            this.salary = salary,
+            this.designation = designation
+    }
+
+    var first = new employees(101, "nishant", 15000, "ceo")
+    var second = new employees(102, "sahil", 12000, "clerk")
+    var third = new employees(103, "panday", 10000, "assistant")
+    var fourth = new employees(104, "shiv", 30000, "manager")
+    var fifth = new employees(105, "mandeep", 10000, "clerk")
+    var sixth = new employees(106, "manohar", 8000, "peon")
+    var seventh = new employees(107, "deepak", 10000, "clerk")
+
+    empArr.push(first, second, third, fourth, fifth, sixth, seventh,)
+
+    document.write("EMPLOYEES:<br> <br>" + JSON.stringify(empArr) + "<br><br>");
+
+
+    // printing employees who are cleark
+
+    document.write(`<h3>employess who are cleark :</h3>`)
+    for (let i in empArr) {
+        if (empArr[i].designation == "clerk") {
+            console.log(empArr[i].name)
+
+            document.write(`- ${empArr[i].name} is ${empArr[i].designation} <br>`)
+        }
+    }
+
+
+    //printing sum of salary of all employees
+    var sum = 0;
+    for (let i in empArr) {
+        sum += empArr[i].salary;
+    }
+
+    document.write(" <h5>total salary of employee =" + sum + "</h5>")
+
+
+
+    // printing average salary
+    var avgSalary = Math.round(sum / empArr.length);
+    document.write(`<h5>Average salary = ${avgSalary} </h5>`)
+
+    //printing employees who are earning more than average salary
+    document.write("<h3>employess who are earning more than average salary :</h3>")
+    for (let i in empArr) {
+        if (empArr[i].salary >= avgSalary) {
+            document.write(`<h5>${empArr[i].name} is earning ${empArr[i].salary}</h5> `);
+        }
+    }
+
+
+</script>

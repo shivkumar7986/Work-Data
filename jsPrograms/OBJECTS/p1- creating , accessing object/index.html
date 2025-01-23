@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>creating and accessing an object</h1>
+
+    <script>
+        //creating a person object
+
+        let person = {
+            firstName: "shiv",
+            lastName: "kumar",
+            age: 22,
+            gender: "male",
+            phoneNumber: 7986925092
+        };
+
+        //accesing object
+        document.write(person.firstName + "<br>"); // accesing with .notation
+        document.write(person["lastName"] + "<br>");// accesing with bracket notation
+        document.write(person.age + "<br>");
+        document.write(person.gender + "<br>");
+        document.write(person.phoneNumber + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>STARTSWITH() & ENDWITH()</h1>
+
+    <script>
+        //The startsWith() method returns true if a string begins with a specified value
+        let txt = "Hello world, welcome to the universe.";
+
+        let txt1 = txt.startsWith("Hello");
+
+        console.log(txt1);
+
+        // we can specigy starting position
+        let txt2 = txt.startsWith("welcome",13);
+        console.log(txt2);
+
+        // ENDWITH()
+        
+        let newtxt = txt.endsWith("universe.");
+        console.log(newtxt);
+    </script>
+</body>
+</html>

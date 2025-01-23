@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>COUNT THE OCCURANCE OF NUMBER FROM AN ARRAY</u></h1>");
+        let array = [3,4,5,3,2,4,5,5,6,7,4,3,5,6,7,4,3,5,6,7];
+        document.write("array = " + array + "<br><br>");''
+        var num = 7;
+        document.write("number = " + num + "<br>");
+        var count = 0;
+        for(let i = 0 ; i<array.length ; i++){
+            if(num === array[i]){
+                count ++;
+            }
+        }
+        document.write(`occurance of ${num} = ${count}`);
+    </script>
+</body>
+</html>

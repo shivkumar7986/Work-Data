@@ -1,0 +1,19 @@
+
+<script>
+    // WAP to define different colors in array but change randomly
+    var color = ["red","green","blue","pink","purple","yellow","cyan"]
+   
+    function show()
+     {
+        var a = parseInt(Math.random()*7);
+        p.innerHTML += "<font color="+color[a]+" size=40 > WELCOME TECHNOLOGY</font><br>";
+       
+        setTimeout("show()",100);
+    
+     }
+    
+    </script>
+    
+    <div id="p"></div>
+    <input type="button" value="show colors"  onclick="show()">
+    

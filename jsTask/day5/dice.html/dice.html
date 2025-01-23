@@ -1,0 +1,16 @@
+<button id="dice" style="height: 50px;width: 100px; background-color: red; color: #fff;">roll dice</button> <br><br>
+
+<img id="img" src="./img/1.png" alt="" height="300" width="300" style="border-radius: 20px;">
+
+<script>
+    var btn = document.getElementById("dice");
+    var img = document.getElementById("img");
+    var imgArr = ["./img/1.png","./img/2.png","./img/3.png","./img/4.png","./img/5.png","./img/6.png"]
+
+    btn.addEventListener("click",()=>{
+        let rdm = Math.floor(Math.random()*6);
+        console.log(rdm)
+        img.src = imgArr[rdm];
+    })
+
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Select Country</h1>
+
+    <div id="main" style="display: flex; gap: 20px;">
+        <div id="one">
+            <select name="country" id="c" onchange="show()">
+                <option value="">select country</option>
+                <option value="usa">USA</option>
+                <option value="india">INDIA</option>
+            </select>
+        </div>
+
+        <div id="two">
+            <select name="state" id="s">
+                <option>select state</option>
+            </select>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    var CountryData = {
+
+        usa: ["California", "Texas", "New York", "Florida"],
+        india: ["Punjab", "Delhi", "Haryana", "UP"]
+
+    }
+
+    var c = `<select> <option>select country </option>`
+
+
+       function show(){
+        var country = document.getElementById("c");
+        var state = document.getElementById("s");
+
+        var selectedCountry = country.value;
+
+        if(selectedCountry){
+            let selectedStates = CountryData[selectedCountry];
+            
+            var options = `<select><option> select state</option><>`
+            for(let i in selectedStates){
+                options += `<option> ${selectedStates[i]} </option>`
+            }
+            state.innerHTML = options
+        }
+       }
+</script>

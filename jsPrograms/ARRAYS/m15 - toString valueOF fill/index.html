@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>TOSTING , VALUEOF AND FILL METHODS</u/></h1>");
+            let arr = [1,3,4,5];
+            document.write("array = " + arr +"<br>");
+
+            //The toString method converts an array to a string and returns a string representing the array elements separated by commas.
+            let str = arr.toString();
+            document.write("string from array = " + str +"<br>");
+            
+            //The valueOf method returns the primitive value of the specified array object.
+            let val = arr.valueOf();
+            document.write("value from array = " + val +"<br>");
+            
+            let newArr = arr.fill(0, 1,3);
+            document.write("new array = " + newArr +"<br>");
+
+    </script>
+</body>
+</html>

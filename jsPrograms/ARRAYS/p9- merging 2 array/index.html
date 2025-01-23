@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>MERGING 2 ARRAY</u></h1>");
+        let array1 = [1,2,3,4,5];
+        document.write("array1 = " + array1 + "<br>");
+        let array2 = [5,6,7,8,2,9,6];
+        document.write("array2 = " + array2 + "<br>");
+        let mergArray = [];
+        for(let i = 0; i<array1.length ; i++){
+            mergArray.push(array1[i]);
+        }
+
+        for(let i = -0; i<array2.length ; i++){
+            mergArray.push(array2[i]);
+        }
+        document.write("merged array : " + mergArray );
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 3 NUMBERS FIND HIGHEST
+
+      document.write("<h1><u>3 VARIABLE FIND THE HIGHEST</u></h1>" + "<br>");
+
+      var number1 = 50;
+      var number2 = 60;
+      var number3 = 10;
+
+      document.write("number1 = " + number1 + "<br>");
+      document.write("number2 = " + number2 + "<br>");
+      document.write("number3 = " + number3 + "<br>");
+
+      if (number1 > number2 && number1 > number3) {
+        document.write(`number ${number1} is greater`);
+      } else if (number2 > number1 && number2 > number3) {
+        document.write(`number ${number2} is greater`);
+      } else if (number3 > number1 && number3 > number2) {
+        document.write(`number ${number3} is greater`);
+      } else if (number1 == number2 && number1 == number3) {
+        document.write("all the numbers are equal");
+      } else document.write("two numbers are equal and are highest");
+
+      document.write("<hr>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<script>
+    function wheather (city,maxTemp,minTemp){
+        this.cityName = city,
+        this.maximumTemperature = maxTemp,
+        this.minimumTemperature = minTemp
+    }
+
+    var first = new wheather("Chandigarh" , "58°c" , "10°c");
+    var second = new wheather("delhi" , "56°c" , "21°c");
+
+    for(let i in first){
+        document.write(`${i} : ${first[i]} <br>`)
+    }
+
+    document.write(`<br><br><br>`)
+    
+    for(let i in second){
+        document.write(`${i} : ${second[i]} <br>`)
+    }
+    
+    document.write(`<br><br><br>`)
+    
+
+    if(first.maximumTemperature > second.maximumTemperature){
+        document.write(`${first.cityName} has the highest temperature`)
+    }
+    else{
+
+        document.write(`${second.cityName} has the highest temperature`)
+    }
+</script>

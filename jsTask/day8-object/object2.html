@@ -1,0 +1,20 @@
+<script>
+    // adding and modifying object
+
+    const car = {
+        name : "toyota",
+        model : "supra",
+    }
+   
+    for(let i in car){
+        document.write(`${i} : ${car[i]} <br>`)
+    }
+    document.write(`<br><br>`)
+    car.color = "white";
+    car.milage = 12;
+    car.price = "$37,412.00";
+
+    for(let i in car){
+        document.write(`${i} : ${car[i]} <br>`)
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="nav" class=" w-full bg-teal-500 px-8 py-8 flex justify-between items-center rounded-xl">
+        <img class="h-12 w-12 rounded-full"
+            src="https://i.pinimg.com/originals/53/a6/a0/53a6a08201c6ff216663e1faa5ebf365.jpg">
+        <h1 class=" text-slate-100  text-2xl">YOUR STORE DATA</h1>
+        <h1 class=" text-slate-100  text-2xl">24 x 7</h1>
+
+    </div>
+
+    <div id="form"
+        class="bg-teal-200 px-10 py-10 w-1/2 my-20 absolute translate-x-2/4 flex items-center justify-center rounded-xl ">
+        <form action="/storingproducts" method="post" class="flex  flex-col w-1/2  gap-5">
+            <input class="py-2 px-2 rounded-md" type="number" name="pid" placeholder="Enter Id">
+            <input class="py-2 px-2 rounded-md" type="text" name="prod" placeholder="Enter Product">
+            <input class="py-2 px-2 rounded-md" type="number" name="rs" placeholder=" Enter Price">
+            <input class="py-2 px-2 rounded-md" type="date" name="tm" placeholder=" Enter Date">
+            <input class="bg-teal-500 rounded-md py-4 text-slate-100 uppercase" type="submit" value="add product">
+        </form>
+
+        
+    </div>
+    <div id="l" class="w-full flex items-center justify-center my-6" > <a class="bg-teal-200 py-2 px-4 mx-4   rounded-md  " href="/">See Products</a></div>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+
+<script>
+var a="welcome to first demo";
+function show()
+ {
+   a+="H ";
+   p.innerHTML=a;
+  
+   if(a.length > 100) 
+     a=" Hi Do ";
+   setTimeout("show()",100);
+}
+</script>
+
+<body>
+<div id="p" > </div>
+<input type="button" value="submit" onclick="show()" />
+
+</body>

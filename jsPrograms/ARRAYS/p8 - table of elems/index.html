@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>TABLE OF ELEMENTS OF ARRAY</u></h1>");
+        let arr = [2,3,4];
+        
+        for(let i = 0 ; i<arr.length ; i++){
+            let num = arr[i];
+            document.write(`Table of ${num} :<br>`)
+
+            for(let j = 1 ; j<=10 ; j++){
+                document.write(`${num} x ${j} = ${num * j}<br>`);
+            }
+            document.write("<br>");
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+ read the contents of file and print the response in text area.
+ -first: read the file and print the contents in json format
+ -second : in html file fetch the data using cors(),
+ -third : and simpply in the text area append the contents

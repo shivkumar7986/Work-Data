@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u> MODIFYING ARRARY ELEMENTS </u></h1>");
+
+        document.write("<u>CHANGE SECOND ELEMENTS FROM AN ARRAY</u> <br>");
+        const fruit = ["Apple" , "Banana" , "Cherry"];
+        document.write("array =" + fruit + "<br>");
+        fruit[1] = "Orange";
+        document.write("updated array =" + fruit + "<br><br>");
+
+
+
+        document.write("<u> ADDING  ELEMENTS IN THE END OF AN ARRAY</u> <br>");
+        const cars = ["BMW" , "SWIFT" , "HONDA"];
+        document.write("array =" + cars + "<br>"); // 1st way
+        cars.push("TOYTA");
+        document.write("updated array = " + cars + "<br>");
+        cars[cars.length - 1] = "MARUTI"; // 2nd way
+        document.write("updated array =" + cars +"<br>");
+    </script>
+</body>
+</html>

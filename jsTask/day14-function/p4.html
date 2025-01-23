@@ -1,0 +1,26 @@
+<table id="table" border="2">
+
+</table>
+
+
+<script>
+
+    const table = document.getElementById("table")
+
+     for(let i = 0 ; i<10 ; i++){
+       const row =  document.createElement("tr");
+
+       for(let j = 0 ; j<10 ; j++){
+        const data = document.createElement("td");
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+
+        data.appendChild(checkbox);
+
+        row.appendChild(data)
+       }
+
+       table.appendChild(row)
+     }
+</script>

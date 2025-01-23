@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <label for="j">your name:</label>
+     <input type="text" name="name" id="jerry">
+    <br><br>
+
+    <select name="ice" id="ice"onchange="change()">
+        <option value="fruit">choose fruit</option>
+        <option value="mango">mango</option>
+        <option value="banana">banana</option>
+        <option value="grapes">grapes</option>
+    </select>
+    <div id="did"></div>
+
+    <script>
+        function change()
+        {
+            const ram = document.getElementById("jerry");
+            const jack =document.getElementById("ice");
+            console.log(ram.value + ' and ' + jack.value);
+            document.getElementById("did").textContent =ram.value + ' and ' + jack.value ;
+
+        }
+    </script>
+</body>
+</html>

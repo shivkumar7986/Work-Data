@@ -1,0 +1,57 @@
+/* Header */
+.header {
+  background: #222;
+  padding: 0.5vw 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .logo .sitename {
+  font-weight: 700;
+}
+
+.header .navmenu ul {
+  display: flex;
+  list-style: none;
+}
+
+.header .navmenu ul li {
+  margin-left: 20px;
+}
+
+.header .navmenu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header .navmenu ul li a:hover {
+  color: #ff5e57;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #ff6f61; /* Match your theme color */
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.logout-button:hover {
+  color: #e65a4f;
+}

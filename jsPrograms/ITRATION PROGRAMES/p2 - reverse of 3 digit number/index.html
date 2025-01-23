@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>REVERSING 3 DIGIT NUMBER </u></h1>");
+        let num = 143;
+        let reverNumber = 0;
+        document.write("number = " + num + "<br>");
+
+        while(num>0){
+            let digit = num % 10 ; // extract last digit
+            reverNumber = reverNumber*10 + digit; // adding extracted digit to revNumber*10 to swap
+            num = Math.floor(num / 10); //  remove the last digit of num
+        }
+
+        document.write("reverse of number = " + reverNumber );
+
+    </script>
+</body>
+</html>

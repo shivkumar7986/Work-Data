@@ -1,0 +1,21 @@
+<button id="b1" onclick="show()">show</button>
+<button id="b2" onclick="show1()">show1</button>
+
+<script>
+    var a= 10;
+
+    function show(){
+        alert(a);
+
+        a += 10;
+        localStorage.setItem("a" , a )
+    }
+
+    function show1(){
+        var t = localStorage.getItem("a");
+
+        alert(t)
+    }
+
+
+</script>

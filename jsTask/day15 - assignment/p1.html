@@ -1,0 +1,85 @@
+<select id="c">
+    <option value="">select country</option>
+</select>
+<select id="s">
+    <option value="">select country</option>
+</select>
+<div id="heading">
+
+</div>
+<div id="wheather">
+
+</div>
+<div id="forcast">
+
+</div>
+<script>
+
+    var country = document.getElementById("c")
+    var state = document.getElementById("s")
+
+
+    function demo(data) {
+        var con = data.map(items => items)
+        // console.log(con)
+
+        for (let i in con) {
+            console.log(con[i])
+            var option = document.createElement("option")
+            option.value = con[i].country
+            option.textContent = con[i].country
+            country.appendChild(option)
+        }
+
+        var selcCountry = '';
+        country.addEventListener("change", () => {
+            var selectedCountry = country.value
+            // alert(selectedCountry)
+            selcCountry = selectedCountry
+            state.innerHTML = `<option>select state</option>`
+            var cities = data.filter(item => item.country === selectedCountry).map(item => item.city)
+
+            for (let i in cities) {
+                var option = document.createElement("option")
+                option.value = cities[i]
+                option.textContent = cities[i]
+                state.appendChild(option)
+            }
+        })
+
+        state.addEventListener("change", () => {
+            var heading = document.getElementById("heading")
+
+            var selectedCity = state.value;
+
+            heading.innerHTML = `<br><h2>Weather in ${selectedCity} , ${selcCountry}</h2><br>`
+
+            var wheatherField = document.getElementById("wheather")
+            var forcast = document.getElementById("forcast")
+            var citywheatherData = data.filter(items => items.city === selectedCity);
+
+            for (let i in citywheatherData) {
+                console.log(citywheatherData[i])
+                wheatherField.innerHTML = `Temperature : ${citywheatherData[i].temperature}<br>
+                                           Description : ${citywheatherData[i].weather_description}<br>
+                                           Humidity : ${citywheatherData[i].humidity}<br>
+                                           Wind Speed : ${citywheatherData[i].wind_speed}<br>`
+
+                
+                
+                forcast.innerHTML = `Forecast :<br> - ${citywheatherData[i].forecast[i].date} , ${citywheatherData[i].forecast[i].temperature} , ${citywheatherData[i].forecast[i].weather_description} , Humidity : ${citywheatherData[i].forecast[i].humidity}% , Wind Speed :${citywheatherData[i].forecast[i].wind_speed}`          
+            }
+
+
+        })
+    }
+
+
+
+
+
+
+    fetch('https://freetestapi.com/api/v1/weathers')
+        .then(res => res.json())
+        .then(data => demo(data));
+</script>

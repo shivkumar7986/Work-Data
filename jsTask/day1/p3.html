@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="enter num 1" id="t1"><br><br>
+    <input type="text" placeholder="enter num 2" id="t2"><br><br>
+    <input type="text" placeholder="output" id="t3"><br><br>
+    <input type="button" value="sum" onclick="sum()">
+    <input type="button" value="multiply" onclick="multiply()">
+
+
+    <script>
+        function sum(){
+            t3.value = parseInt(t1.value) + parseInt(t2.value);
+        }
+
+        function multiply(){
+            t3.value = parseInt(t1.value) * parseInt(t2.value);
+        }
+    </script>
+</body>
+</html>

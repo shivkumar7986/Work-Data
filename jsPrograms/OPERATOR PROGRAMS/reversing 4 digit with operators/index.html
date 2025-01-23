@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // REVERSING 4 DIGIT NUMBER USING ONLY OPERATOR
+
+      var n = 1234;
+      document.write("number = " + n + "<br>");
+
+      n1 = n % 10;
+      n2 = Math.trunc(n / 10) % 10;
+      n3 = Math.trunc(n / 100) % 10;
+      n4 = Math.trunc(n / 1000);
+
+      var rev = n1 * 1000 + n2 * 100 + n3 * 10 + n4;
+
+      document.write("reversed number = " + rev + "<hr>");
+    </script>
+  </body>
+</html>

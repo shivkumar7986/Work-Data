@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container"
+        style="border: 4px solid blue; padding: 1vw 3vw; width: 50vw; margin: 2vw auto; font-family: poppins;">
+        <h1 style="text-transform: capitalize; color: blue;">use a test score array</h1>
+
+
+        Name : <input type="text" name="name" id="n1" style="padding: 0.5vw 2vw;margin-left: 2vw;"><br><br>
+        Score : <input type="text" name="score" id="s1" style="padding: 0.5vw 2vw; margin-left: 2.2vw;"><br><br>
+        <div id="btns" style="display: flex; gap: 1vw;padding-left: 5.4vw;">
+            <button id="btn1" style="padding: 0.4vw 1vw;" onclick="adding()">Add to Array</button>
+            <button id="btn2" style="padding: 0.4vw 1vw;" onclick="dispResult()">Display Results</button>
+            <button id="btn3" style="padding: 0.4vw 1vw;" onclick="dispScores()">Display Scores</button>
+        </div>
+
+        <div id="result" style="display: none;">
+            <h2 style="color: blue;">Results</h2>
+        </div>
+
+        <h2 id="scrheding" style="color: blue;display: none; margin-bottom: 0;">Scores</h2>
+        <div id="scores" style="display: none;">
+            <div id="namesbox"></div>
+            <div id="scoresbox"></div>
+        </div>
+    </div>
+
+
+    <script>
+        var n = document.getElementById("n1");
+        var s = document.getElementById("s1");
+        var nameArr = [];
+        var scoreArr = [];
+
+
+
+        function adding() {
+
+            if (n.value == '' || s.value == '') {
+                alert("Kindly fill all the fields");
+            }
+            else {
+                nameArr.push(n.value);
+                scoreArr.push(parseInt(s.value));
+                alert("Added succsfuly  ");
+                n.value = "";
+                s.value = "";
+            }
+        }
+
+
+
+        var res = document.getElementById('result');
+
+        function dispResult() {
+            res.style.display = "block"
+            if (scoreArr.length == 0) {
+                alert("Kindly add some values to array");
+            }
+            else {
+                var num = 0;
+                var largNum = 0;
+                var avg = 0;
+                var largName = ''
+                for (let i in scoreArr) {
+                    num += parseInt(scoreArr[i])
+                    console.log(num)
+                    avg = num / nameArr.length;
+
+                    for (let j in nameArr) {
+                        if (scoreArr[i] > largNum) {
+                            largNum = scoreArr[i];
+                            largName = nameArr[i]
+                        }
+                    }
+
+                }
+
+                res.innerHTML += `Average Score = ${avg}`
+                res.innerHTML += `<br>High Score = ${largName} with a score of   ${largNum}`
+
+
+            }
+        }
+        
+        
+        var scr = document.getElementById("scores");
+        var scrHead = document.getElementById("scrheding");
+        var scrbox = document.getElementById("scoresbox");
+        var nambox = document.getElementById("namesbox");
+
+        function dispScores() {
+            if(nameArr == ''  && scoreArr == ''){
+                alert("first add some data !")
+            }
+            else{
+                scrHead.style.display = "block"
+                scr.style.display = "flex";
+                scr.style.gap = "4vw";
+
+              nambox.innerHTML = `<h3>Name</h3>`
+
+              for (let i in nameArr) {
+                nambox.innerHTML += `${nameArr[i]}<br>`
+              }
+
+              scrbox.innerHTML = `<h3>Scores</h3>`
+
+              for (let i in nameArr) {
+                scrbox.innerHTML += `${scoreArr[i]} <br>`
+              }
+            }
+        }
+  
+  
+  </script>
+</body>
+
+</html>

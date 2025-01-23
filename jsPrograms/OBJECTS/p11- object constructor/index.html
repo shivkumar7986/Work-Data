@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> OBJECT CONSTRUCTOR FUNCTIONS </h1>
+    <!-- Sometimes we need to create many objects of the same type.
+    To create an object type we use an object constructor function. -->
+
+    <div id="m"></div>
+    <div id="b"></div>
+
+    <script>
+        // Constructor function for person
+        function Person(fisrt, last , age , eye){
+            this.firstName = fisrt, //In the constructor function, this has no value.The value of this will become the new object when a new object is created.
+            this.lastName = last,
+            this.age = age,
+            this.eyeColor = eye
+        }
+
+        //create a person object
+
+        let mySelf  = new Person("shiv" , "kumar" , 22, "brown");
+
+        let myBro = new Person("shayam" , "kumar" , 19 , "black");
+
+        //display my age
+        document.getElementById('m').innerHTML = " I am "+ mySelf.age + " years old";
+
+        // display my brother eyecolor
+        document.getElementById('b').innerHTML ="my bro has " + myBro.eyeColor + " color eyes"
+
+    </script>
+</body>
+</html>

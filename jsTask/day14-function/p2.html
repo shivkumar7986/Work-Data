@@ -1,0 +1,22 @@
+<script>
+    const arr = ["dog" , "cat" , "snake" , "cow" , "hen" , "parrot" , "rabbit"];
+
+    var drop = `<select> <option> select pet </option>`;
+        
+    function show(){
+        for(let i in arr){
+           drop  += `<option> ${arr[i]} </option>`
+        }
+        drop += `</select>`;
+        t1.innerHTML = drop
+    }
+
+</script>
+
+<button onclick="show()"> click to add</button> <br><br>
+
+<div id="o">
+    <select  id="t1">
+        <option >select pet</option>
+    </select>
+</div>

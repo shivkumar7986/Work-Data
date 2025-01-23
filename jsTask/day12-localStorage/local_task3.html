@@ -1,0 +1,34 @@
+City Name : <input type="text"  id="city"><br><br>
+Max Temperature  : <input type="number"  id="maxTemp"><br><br>
+Min Temperature  : <input type="number"  id="minTemp"><br><br>
+
+<button onclick="addingData()">Add Data</button>
+<button><a href="./local_task3a.html">Show Data</a></button>
+
+
+<script>
+   var c = document.getElementById("city");
+   var max = document.getElementById("maxTemp");
+   var min = document.getElementById("minTemp");
+   
+   let dataArr = [];
+
+    function addingData(){
+        if(c.value=='' || max.value=='' || min.value==''){
+    alert("Please fill all the fields!!");
+   }
+   else{
+    var o = new Object();
+    o.city = c.value;
+    o.max_temperature = max.value;
+    o.min_temperature = min.value;
+    c.value ="";
+    max.value ="";
+    min.value ="";
+    dataArr.push(o);
+
+    localStorage.setItem("data" , JSON.stringify(dataArr));
+    alert("Added succesfully!")
+   }
+    }
+</script>

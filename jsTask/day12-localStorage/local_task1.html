@@ -1,0 +1,25 @@
+<input type="text" id="username" placeholder="enter username"><br><br>
+<input type="password" id="password" placeholder="enter password"><br><br>
+<button id="btn" onclick="addData()">Add</button>
+<br><br>
+
+<a href="local_task1a.html">show</a>
+
+
+<script>
+    var userName = document.getElementById("username");
+    var pass = document.getElementById("password");
+    var btn = document.getElementById("btn");
+    function addData() {
+        if(userName.value == "" && pass.value == ""){
+            alert("Please enter somthing!!");
+        }
+        else{
+            localStorage.setItem("userName" , userName.value);
+            localStorage.setItem("password" , pass.value);
+            alert("Added succesfully!");
+            userName.value = "";
+            pass.value = "";
+        }
+    }
+</script>

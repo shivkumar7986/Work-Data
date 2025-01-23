@@ -1,0 +1,12 @@
+<textarea  id="t1"></textarea>
+
+<script>
+
+    async function shoow() {
+        let row = await fetch('http://localhost:3000');
+        let dt = await row.json()
+        console.log(dt)
+        t1.innerHTML = dt
+    }
+    shoow()
+</script>

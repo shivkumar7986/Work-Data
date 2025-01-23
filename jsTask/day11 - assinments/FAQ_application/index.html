@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="main" style="border: 4px solid blue; padding: 2vw 4vw; font-family: poppins;">
+        <h1>JavaScript FAQ's</h1><br>
+
+        <div id="q1" style="display: flex; gap: 1.5vw; align-items: center; cursor: pointer;">
+            <input id="btn" type="button" value="+" style="background-color: #fff; outline: none; border: none; font-size: 2vw;">
+            <h2>What is JavaScript?</h2>
+        </div>
+        <p id="p1" style="display: none;margin-left: 4vw;">JavaScript is a scripting language that enables you to create
+            dynamically updating content, control multimedia, animate images, and much more.</p>
+
+
+        <div id="q2" style="display: flex; gap: 1.5vw; align-items: center; cursor: pointer;">
+            <input id="btn2" type="button" value="+" style="background-color: #fff; outline: none; border: none; font-size: 2vw;">
+            <h2>What is jQuery?</h2>
+        </div>
+        <p id="p2" style="display: none;margin-left: 4vw;">jQuery is the library of the JavaScript fucntions that you're
+            most likely to need as you develop web sites.</p>
+
+
+
+        <div id="q3" style="display: flex; gap: 1.5vw; align-items: center; cursor: pointer;">
+            <input id="btn3" type="button" value="+" style="background-color: #fff; outline: none; border: none; font-size: 2vw;">
+            <h2>Why is jQuery becoming so popular?</h2>
+        </div>
+        <p id="p3" style="display: none;margin-left: 4vw;">With over 10 years of development, jQuery has accumulated a
+            vast array of useful plugins, making it an attractive choice for developers who need to quickly implement
+            common functionality.</p>
+
+
+    </div>
+
+
+
+    <script>
+        var q1 = document.getElementById("q1");
+        var q2 = document.getElementById("q2");
+        var q3 = document.getElementById("q3");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var btn = document.getElementById("btn")
+        var btn2 = document.getElementById("btn2")
+        var btn3 = document.getElementById("btn3")
+
+
+        var togle = true;
+        var togle2 = true;
+        var togle3 = true;
+        q1.addEventListener("click" , ()=>{
+            
+
+            if(togle == true){
+                p1.style.display = "block";
+                p2.style.display = "none"
+                p3.style.display = "none"
+                btn.value = "-";
+                btn2.value = "+"
+                btn3.value = "+"
+                togle = false;
+
+            }
+            else{
+                p1.style.display = "none";
+                btn.value = "+";
+                togle = true;
+            }
+            
+        })  
+        
+       
+        q2.addEventListener("click" , ()=>{
+            
+
+            if(togle2 == true){
+                p2.style.display = "block";
+                p1.style.display = "none"
+                p3.style.display = "none"
+                btn2.value = "-";
+                btn.value = "+"
+                btn3.value = "+"
+                togle2 = false;
+            }
+            else{
+                p2.style.display = "none";
+                btn2.value = "+";
+                togle2 = true;
+            }
+            
+        })   
+
+        
+        q3.addEventListener("click" , ()=>{
+            
+
+            if(togle3 == true){
+                p3.style.display = "block";
+                p1.style.display = "none"
+                p2.style.display = "none"
+                btn3.value = "-";
+                btn.value = "+"
+                btn2.value = "+"
+                togle3 = false;
+            }
+            else{
+                p3.style.display = "none";
+                btn3.value = "+";
+                togle3 = true;
+            }
+            
+        })   
+
+
+    </script>
+
+</body>
+
+</html>

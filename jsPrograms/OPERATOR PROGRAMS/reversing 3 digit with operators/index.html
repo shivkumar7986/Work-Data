@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // REVERSING 3 DIGIT NUMBER USING ONLY OPERATOR
+
+      document.write("<h1><u> REVERSING NUMBER </u></h1>");
+
+      var x = 343;
+      document.write("number = " + x + "<br>");
+
+      mod1 = x % 10; // 3
+      mod2 = Math.trunc(x / 10) % 10; // 4
+      mod3 = Math.trunc(x / 100); // 1
+
+      var revNum = mod1 * 100 + mod2 * 10 + mod3;
+
+      document.write("reversed number = " + revNum + "<hr>");
+    </script>
+  </body>
+</html>

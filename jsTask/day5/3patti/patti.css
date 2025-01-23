@@ -1,0 +1,158 @@
+* {
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: Poppins;
+}
+
+html, body {
+height:100%;
+width:100%;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: #DAE0F5;
+    padding: 1vw 2vw ;
+}
+
+#heading{
+    font-size: 3vw;
+    font-weight: 500;
+    border-bottom: 1px solid #678198;
+    width: max-content;
+    color: #678198;
+}
+
+#box{
+    /* margin-top:50px; */
+    height: 18vw;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#box img{
+    height: 100%;
+    width: 40%;
+    object-fit: cover;
+}
+
+#box #startBtn{
+    padding: 1vw 2vw;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    font-size: 1vw;
+    font-weight: 500;
+    /* color: #678198; */
+    box-shadow: 5px 5px 5px #678198a4;
+    transition: all ease 0.4s;
+}
+
+#startBtn:hover{
+    color:#DAE0F5;
+    background-color: #678198;
+  
+}
+
+#box #resetBtn{
+    padding: 1vw 2vw;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    font-size: 1vw;
+    font-weight: 500;
+    /* color: #678198; */
+    box-shadow: 5px 5px 5px #678198a4;
+    transition: all ease 0.4s;
+}
+
+#resetBtn:hover{
+    color:#DAE0F5;
+    background-color: #678198;
+  
+}
+
+#box1{
+    height: 24vw;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+#box1 #left{
+    height: 100%;
+    width: 45%;
+    /* background-color: green; */
+    
+}
+#left #name{
+    text-align: center;
+    /* margin-top: 20px; */
+    font-weight: 500;
+    color: #678198;
+
+}
+
+#left #leftTop{
+    /* background-color: blue; */
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+#box1 #vs{
+    color: #678198;
+}
+
+
+
+#box1 #right{
+    height: 100%;
+    width: 45%;
+    /* background-color: rgb(90, 0, 128); */
+}
+#right #name{
+    text-align: center;
+    /* margin-top: 20px; */
+    font-weight: 500;
+    color: #678198;
+}
+#right #rightTop{
+    /* background-color: blue; */
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+#leftTop .card{
+    height: 80%;
+    width: 30%;
+    /* background: red; */
+    border-radius: 10px;
+}
+
+#rightTop .card{
+    height: 80%;
+    width: 30%;
+    /* background: red; */
+    border-radius: 10px;
+}

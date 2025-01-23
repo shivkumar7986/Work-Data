@@ -1,0 +1,13 @@
+<h1>Edit Customer Data</h1> <br>
+
+<form action="/updatedata" method="post">
+    <% a.forEach((i)=>{ %>
+        
+        Name : <input type="text" name="t1" value="<%= i.name %>" ><br><br>
+        Address : <input type="text" name="t2" value="<%= i.address %>" ><br><br>
+        Phone : <input type="text" name="t3" value="<%= i.phone_no %>" ><br><br>
+        Designation : <input type="text" name="t4" value="<%= i.designation %>" ><br><br>
+        <input type="hidden" name="myid" value="<%= i.id %>">
+        <input type="submit" value="Update">
+    <% }) %>
+</form>

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fffce1;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#rect{
+    height: 200px;
+    width: 400px;
+    /* background-color: red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rect h1{
+    text-transform: uppercase;
+    color: #0E100F;
+    font-weight: 500;
+    font-size: 7vw;
+}

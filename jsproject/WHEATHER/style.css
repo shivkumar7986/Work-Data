@@ -1,0 +1,164 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: Poppins;
+}
+
+html,
+body {
+    height: 100%;
+    width : 100%;
+}
+
+.heading{
+    font-weight: 500;
+   color: #00feba;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid #00feba;
+    transition: all ease 0.4s;
+}
+.heading:hover{
+    border-bottom: 2px solid #5b548a;
+    color: #5b548a;
+}
+.heading:hover span{
+    color: #00feba;
+}
+.heading span{
+    color: #5b548a;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#card {
+    /* height       : 550px; */
+    width        : 450px;
+    background   : linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 20px;
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
+    padding      : 20px;
+    position     : relative;
+}
+
+#card .search {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    gap            : 30px;
+    width          : 100%;
+    padding        : 10px 10px;
+}
+
+.search input {
+    padding         : 17px 10px;
+    border          : none;
+    outline         : none;
+    border-radius   : 30px;
+    width           : 80%;
+    background-color: #ebfffc;
+}
+
+.search button {
+    border         : none;
+    height         : 50px;
+    width          : 50px;
+    border-radius  : 50%;
+    cursor         : pointer;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    transition: all ease .3s;
+}
+
+.search button:hover{
+    background-color: #00febaaa;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.error h5{
+    color: red;
+    font-weight: 400;
+    text-align: center;
+    display: none;
+}
+
+.wheather {
+
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+}
+
+.wheather img {
+    width : 150px;
+    height: 150px;
+
+}
+
+.temp {
+    font-size  : 70px;
+    font-weight: 500;
+    color      : #fff;
+}
+
+.city {
+    font-size  : 30px;
+    font-weight: 400;
+    color      : #fff;
+}
+
+.elem {
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : 10px 20px;
+    margin-top     : 40px;
+    text-align     : center;
+}
+
+.elem .elem1 {
+    display    : flex;
+    align-items: center;
+    gap        : 10px;
+}
+
+.elem img {
+    width : 50px;
+    height: 30px;
+}
+
+.elem .elem2 {
+    display    : flex;
+    align-items: center;
+    gap        : 10px;
+}
+
+.humidity {
+    font-size  : 25px;
+    color      : #fff;
+    font-weight: 400;
+}
+.wind {
+    font-size  : 25px;
+    color      : #fff;
+    font-weight: 400;
+}
+
+.elem h5 {
+    color      : #Fff;
+    font-weight: 300;
+}

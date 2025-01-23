@@ -1,0 +1,25 @@
+<div id="o">
+
+</div>
+<script>
+    const arr = [ 50 , 60, 70, 80,90];
+    
+    var sum = 0;
+
+    for(let i in arr){
+           sum += arr[i];
+           o.innerHTML += ` ${arr[i]},`
+    }
+    var avg = sum / 5 ; 
+    o.innerHTML += `<br> average :${avg}<br><br>`
+    
+    var gradesA = arr.filter(item => (item > 80))
+    var gradesB = arr.filter(item => (item >= 60) && (item < 80))
+    var gradesC = arr.filter(item => (item < 60))
+    
+
+    o.innerHTML += `A Grade : ${gradesA}<br>`
+    o.innerHTML += `B Grade : ${gradesB}<br>`
+    o.innerHTML += `C Grade : ${gradesC}<br>`
+</script>
+

@@ -1,0 +1,30 @@
+<div id="p">
+
+</div>
+
+<script>
+
+    const numArr = [1,2,3,4,5,6,7];
+
+    var t = `<table border = "1">`;
+
+        
+    for(let i = 1 ; i<= 1 ; i++){
+
+        for(let j = 0 ; j<numArr.length ; j++){
+            t += `<td> ${numArr[j]} </td>`
+
+            if(j < numArr.length-1){
+                for(let k = 1 ; k <= 1 ; k++){
+                t += `<td> - </td>`
+                }
+            }
+        }
+        t+= `<tr>`
+    }
+
+    t+=`</table>`;
+    p.innerHTML = t
+        
+ 
+</script>

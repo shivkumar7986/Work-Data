@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>PATTERN 9</u></h1>");
+        var size = 5;
+        var space = 4;
+        var space2 = 9;
+        for(let i = 1; i<=size ; i++){
+            for(let j = space ; j>0 ; j--){
+                document.write("_");
+            }
+            for(let k=1 ; k<i*2 ; k++){
+                document.write("*")
+            }
+           
+            document.write("<br>");
+            space--;
+        }
+
+        for(let i = 1; i<=size ; i++){
+            for(let j = 2 ; j<=i ; j++){
+                document.write("_");
+            }
+            for(let k=space2 ; k>0 ; k--){
+                document.write("*")
+            }
+           
+            document.write("<br>");
+            space2=space2-2;
+        }
+    </script>
+</body>
+</html>

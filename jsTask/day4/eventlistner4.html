@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">choose your favroite season</h1>
+
+    <input type="radio" name="btn" id="b1" value="Rainy">Rainy <br>
+    <input type="radio" name="btn" id="b2" value="winter">Winter <br>
+    <input type="radio" name="btn" id="b3" value="summer">Summer <br>
+    <input type="radio" name="btn" id="b4" value="Monsoon">Monsoon <br>
+    <br>
+    <input type="checkbox" name="check1" id="c1" value="graduated"> graduated <br>
+    <input type="checkbox" name="check2" id="c2" value="under graduated"> under graduated <br>
+    <input type="checkbox" name="check3" id="c3" value="post graduated">post graduated <br> <br>
+    
+    <button id="clickBtn">clickMe</button>
+
+    <h3 id="disp" style="color: green;"></h3>
+    <h4  id ="disp1" style="color: blue;" ></h4>
+    <h3 id="error" style="color: red;"></h3>
+
+
+    <script>
+        var clickBtn = document.getElementById("clickBtn");
+        var input1 = document.getElementById("b1")
+        var input2 = document.getElementById("b2")
+        var input3 = document.getElementById("b3")
+        var input4 = document.getElementById("b4")
+
+        var check1 = document.getElementById("c1")
+        var check2 = document.getElementById("c2")
+        var check3 = document.getElementById("c3")
+
+        var disp = document.getElementById("disp")
+        var disp1 = document.getElementById("disp1")
+        var error = document.getElementById("error")
+
+        clickBtn.addEventListener("click", () => {
+            if (input1.checked) {
+                disp.innerHTML = `${input1.value} is selected`
+                error.innerHTML = " ";
+            }
+            else if (input2.checked) {
+                disp.innerHTML = `${input2.value} is selected`
+                error.innerHTML = " ";
+            }
+            else if (input3.checked) {
+                disp.innerHTML = `${input3.value} is selected`
+                error.innerHTML = " ";
+            }
+            else if (input4.checked) {
+                disp.innerHTML = `${input4.value} is selected`
+                error.innerHTML = " ";
+            }
+
+            else{
+                error.innerHTML= "you've select any season"
+            }
+
+           
+            var s = " ";
+            if(check1.checked){
+                s += check1.value + "<br>"
+                
+            }
+            if(check2.checked){
+                s +=check2.value + "<br>"
+               
+            }
+            if(check3.checked){
+                s += check3.value + "<br>"
+               
+            }
+
+            disp1.innerHTML = s;
+
+        
+            
+        })
+    </script>
+</body>
+
+</html>

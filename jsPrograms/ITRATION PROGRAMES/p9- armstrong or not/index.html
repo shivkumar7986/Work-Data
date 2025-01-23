@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u> ARMSTRONG OR NOT </u></h1>");
+        let num = 153;
+        let originalNumber = num;
+        document.write("number = " + num + "<br>");
+        var sum = 0;
+        var numberOfDigit = num.toString().length;
+        console.log(numberOfDigit)
+        while(num>0){
+            let digit = num % 10 ;
+            sum = sum +  Math.pow(digit,numberOfDigit);
+            num = Math.floor(num / 10 );
+        }
+        if(sum == originalNumber){
+           document.write(originalNumber + " is a armstrong number ");
+        }
+        else{
+            document.write(originalNumber + " is not a armstrong number");
+        }
+        
+    </script>
+</body>
+</html>

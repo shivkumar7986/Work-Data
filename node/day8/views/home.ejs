@@ -1,0 +1,25 @@
+<h1>Welcome To Home</h1>
+
+<a href="/adddata">Add Data</a>
+
+<br><br>
+<hr>
+<br><br>
+
+<h2>Customers Data :</h2>
+
+<table border="1"> 
+    <th>ID</th> <th>NAME</th><th>ADDRESS</th><th>PHONE_NO</th><th>DESIGNATION</th><th>DELETE</th><th>EDIT</th>
+    <% a.forEach((i)=>{ %>
+        <tr>
+            <td><%= i.id %></td>
+            <td><%= i.name %></td>
+            <td><%= i.address %></td>
+            <td><%= i.phone_no %></td>
+            <td><%= i.designation %></td>
+            <td><a href="/deletedata/<%= i.id %>">Delete</a></td>
+            <td><a href="/editdata/<%= i.id %>">Edit</a></td>
+        </tr>
+    <% }) %>
+    
+</table>

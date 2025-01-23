@@ -1,0 +1,26 @@
+<div id="output">
+
+</div>
+
+<script>
+
+    var s = `<table><tr><th>Image</th><th>Category</th><th>Title</th><th>Price</th><th>Id</th></tr>`
+    function demo(data){
+        console.log(data)
+        data.products.map(product => {
+            s += ` <tr><td><img src= ${product.images[0]} height = 80 width = 90 >
+                       <td> ${product.category}
+                       <td> ${product.title}
+                       <td> ${product.price}
+                       <td> ${product.id}
+            `
+        })
+         s += `</table>`
+         output.innerHTML = s
+    }
+
+    fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(data => demo(data));
+
+</script>

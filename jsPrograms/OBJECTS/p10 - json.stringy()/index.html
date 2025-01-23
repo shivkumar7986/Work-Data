@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>USING JASON.STRINGIFY() </h1>
+    <div id="p"></div>
+
+    <script>
+        const person = {
+            name: "shiv",
+            age : 22,
+            city : "chandigarh"
+        };
+        
+        //The JSON.stringify() method in JavaScript converts a JavaScript object or value to a JSON string.
+        let myString = JSON.stringify(person);
+
+        document.getElementById('p').innerHTML = myString;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>REPLACE METHOD</h1>
+
+    <script>
+        //The replace() method replaces a specified value with another value in a string:
+        //The replace() method replaces only the first match
+        //case sensitive
+        let text = "my friend is nishant";
+        let newtext = text.replace("nishant","arun");
+        console.log(newtext);
+        
+
+        //to replace case insensitive , use regular expression with an /i flag
+
+        let name = "i am shiv";
+        let newname = name.replace(/SHIV/i , "sahil");
+        console.log(newname);
+
+        //To replace all matches, use a regular expression with a /g flag (global match):
+        let para = "please visit microsoft and microsoft";
+        let newpara = para.replace(/microsoft/g , "oops");
+        console.log(newpara);
+
+
+        //ReplaceAll()
+        //The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+
+        //If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+
+        let string = "i love cats . cats are very ease to love. cats are very popular";
+
+        let newString = string.replaceAll(/cats/g , "cows");
+        console.log(newString);
+
+
+
+    </script>
+</body>
+</html>

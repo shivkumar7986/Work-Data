@@ -1,0 +1,120 @@
+* {
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: Poppins;
+}
+
+html, body {
+height:100%;
+width:100%;
+}
+
+body{
+    background-image: linear-gradient( 109.6deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+}
+
+#container{
+    height: 60%;
+    width: 60%;
+    background-image: linear-gradient( 91.9deg,  rgba(94,124,121,1) 4.4%, rgba(64,224,208,1) 89% );    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.heading{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 2vw;
+    text-align: center;
+    letter-spacing: 6px;
+    margin-top: 30px;
+}
+
+span{
+    color: yellow;
+    letter-spacing: 0px;
+    font-size: 20px;
+}
+.heading2{
+    color: yellow;
+    letter-spacing: 0px;
+    font-size: 3vw;
+}
+
+#box{
+    padding:  30px 40px;
+    width: 50%;
+    background-color: #ffffff69;
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(100px);
+    margin-bottom: 20px;
+}
+
+#box #date{
+    padding: 15px 20px;
+    width: 70%;
+    font-size: 20px;
+    border:1px solid #aaa;
+    outline: none;
+    border-radius: 5px;
+}
+
+#box #calculate{
+    padding: 15px 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    background-color: yellow;
+    border: 1px solid yellow;
+    outline: none;
+    border-radius: 5px;
+    color: #555;
+}
+
+#result{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+@media (max-width:768px){
+    #container{
+        height: 60%;
+        width: 90%;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .heading2{
+        font-size: 30px;
+    }
+    #box{
+        padding: 20px 10px ;
+        width: 100%;
+    }
+    #box #date{
+        padding: 5px 7px;
+        font-size: 15px;
+        width: 90%;
+    }
+    #box #calculate{
+        padding: 5px;
+        font-size: 10px;
+    }
+    #result{
+        font-size: 15px;
+        text-align: center;
+    }
+    span{
+        font-size: 15px;
+    }
+}

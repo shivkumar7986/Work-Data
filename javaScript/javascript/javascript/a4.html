@@ -1,0 +1,19 @@
+
+<script>
+var i=1;
+function show()
+ {
+    console.log(i);
+    i=i+1;
+  
+   if(i>=10)
+    i=1;
+   setTimeout("show()",100);
+}
+</script>
+
+<body>
+
+<input type="button" value="submit" onclick="show()" />
+
+</body>

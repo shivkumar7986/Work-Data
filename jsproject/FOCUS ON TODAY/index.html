@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="heading">
+        <h1>focus on <span>today</span></h1>
+      </div>
+
+      <div class="container">
+        <div class="title">
+          <h3>today</h3>
+          <img src="./Sun.svg" class="sun" />
+        </div>
+
+        <div class="barHeading">
+          <h5>raise the bar by completing your goals!</h5>
+        </div>
+
+        <div class="progressBar">
+          <div class="progressVal">
+            <span>2/3 completed</span>
+          </div>
+        </div>
+
+        <div class="errorMsg">
+          <p>please set all the three goals!</p>
+        </div>
+
+        <div class="addGoal ">
+          <div class="minCir ">
+            <img src="./Vector 1.svg" class="check">
+          </div>
+          <input type="text" placeholder="add new goal..." class="goalText" id="first"></input>
+        </div>
+        <div class="addGoal ">
+            <div class="minCir ">
+              <img src="./Vector 1.svg" class="check">
+            </div>
+            
+            <input type="text" placeholder="add new goal..." class="goalText" id="second"></input>
+        </div>
+        <div class="addGoal ">
+            <div class="minCir">
+              <img src="./Vector 1.svg" class="check">
+            </div>
+            
+            <input type="text" placeholder="add new goal..." class="goalText" id="third"></input>
+        </div>
+
+        
+        <div id="lastDiv">
+          <button class="clear">clear</button>
+        <h1 class="footer">"move one step ahead today!"</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: Poppins;
+}
+
+html,
+body {
+    height: 100%;
+    width : 100%;
+}
+
+#main {
+    height         : 100%;
+    width          : 100%;
+    background     : linear-gradient(359.8deg, rgba(252, 255, 222, 1) 2.2%, rgba(182, 241, 171, 1) 99.3%);
+    padding        : 30px;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: start;
+}
+
+#main .heading {
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
+    text-transform     : capitalize;
+    color              : #4CBB17;
+    font-size          : 27px;
+    margin-bottom      : 30px;
+    /* background-color: red; */
+}
+
+.heading span {
+    color: #61481C;
+
+}
+
+
+
+#main .container {
+    width           : 50%;
+    background-color: #fff;
+    position        : relative;
+    border-radius   : 10px;
+    padding         : 14px 40px;
+
+}
+
+
+.container .title {
+    display    : flex;
+    align-items: center;
+    gap        : 15px;
+}
+
+.title h3 {
+    font-size     : 25px;
+    text-transform: capitalize;
+    font-weight   : 500;
+}
+
+
+.title img {
+    height: 30px;
+    width : 30px;
+}
+
+.barHeading {
+    margin-top: 20px;
+}
+
+.barHeading h5 {
+    font-weight   : 400;
+    font-size     : 11px;
+    text-transform: capitalize;
+    color         : #aaa;
+}
+
+.progressBar {
+    width           : 100%;
+    height          : 30px;
+    background-color: #49a3001a;
+    border-radius   : 20px;
+    margin-top      : 15px;
+}
+
+.progressBar .progressVal {
+    height          : 100%;
+    width           : 0%;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    border-radius   : 20px;
+    display         : flex;
+    align-items     : center;
+    font-size       : 13px;
+    color           : #fff;
+    overflow: hidden;
+    transition: all ease 0.3s;
+}
+
+.progressVal span{
+    padding-left: 20px;
+    /* white-space: nowrap; */
+    min-width: max-content;
+}
+
+.errorMsg {
+    margin     : 20px 0;
+    font-size  : 11px;
+    color      : red;
+    font-weight: 500;
+    display    : none;
+}
+
+.addGoal {
+    width        : 100%;
+    height       : 70px;
+    border       : 1px solid #ddd;
+    margin-top   : 30px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding      : 20px 30px;
+    display      : flex;
+    align-items  : center;
+    gap          : 30px;
+
+}
+
+.minCir {
+    height         : 17px;
+    width          : 17px;
+    border         : 1px solid #aaa;
+    border-radius  : 50%;
+    cursor         : pointer;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.check {
+    display: none;
+}
+
+.addGoal .minCir img {
+    height: 9px;
+    width : 9px;
+}
+
+.completed .minCir {
+    background-color: #4CBB17;
+    border-color    : #4CBB17;
+}
+
+.completed .check {
+    display: block;
+}
+
+.completed .goalText {
+    color          : #4CBB17;
+    text-decoration: line-through;
+}
+
+.goalText {
+    font-size     : 15px;
+    text-transform: capitalize;
+    color         : #111;
+    font-weight   : 400;
+    border        : none;
+    outline       : none;
+}
+
+#lastDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.clear{
+    padding: 7px 30px;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.clear:hover{
+    background-image: linear-gradient(to right, #38f9d7 0%, #43e97b 100%);
+    color: #555;
+
+}
+
+.footer {
+    font-size    : 20px;
+    text-align   : center;
+    margin-bottom: 20px;
+    font-weight  : 500;
+}
+
+
+
+@media (max-width: 768px) {
+    #main .heading {
+        font-size : 20px;
+        margin-top: 30px;
+    }
+
+    #main .container {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+
+    .progressBar .progressVal {
+        font-size: 10px;
+        /* padding  : 0 10px; */
+    }
+
+    .addGoal .minCir {
+        height: 15px;
+        width : 15px;
+    }
+
+    .addGoal {
+        padding      : 0 10px;
+        gap          : 10px;
+        margin-bottom: 20px;
+    }
+
+}

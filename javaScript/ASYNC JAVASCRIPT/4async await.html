@@ -1,0 +1,15 @@
+<script>
+    function data() {
+        fetch('https://dummyjson.com/users')
+            .then(res => res.json())
+            .then((d) => { console.log(d) });
+    }
+    // data()
+
+    async function users() {
+        var raw = await fetch('https://dummyjson.com/users')
+        var data = await raw.json()
+        console.log(data)
+    }
+    users()
+</script>

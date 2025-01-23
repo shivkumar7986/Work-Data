@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1><u>FINDING TAX WITH SALARY</u></h1>");
+      const personSalary = 6000;
+      document.write("salary of person = " + personSalary + "<br>");
+
+      if (personSalary >= 12000) {
+        document.write("tax for this salary = 1.9% <br>");
+        const tax = (personSalary * 19) / 100;
+        document.write("salary tax = " + tax);
+      } else if (personSalary >= 8000 && personSalary <= 11999) {
+        document.write("tax for the salary = 1.2% <br>");
+        const tax = (personSalary * 12) / 100;
+        document.write("salary tax = " + tax);
+      } else if (personSalary >= 5000 && personSalary <= 7999) {
+        document.write("tax for the salary = 1.1% <br>");
+        const tax = (personSalary * 11) / 100;
+        document.write("salary tax = " + tax);
+      } else {
+        document.write("there is no tax for this salary");
+      }
+    </script>
+  </body>
+</html>

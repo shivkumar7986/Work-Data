@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        function rst(){
+            alert('are you relly want to reset');
+        }
+    </script>
+    <form onreset="rst()" onsubmit="return confirm('are you sure!')" action="./action.html" method="post">
+        username <input type="text" name="username" id="u"><br><br>
+        password <input type="password" name="password" id="p"><br><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+
+    <!-- <script>
+        var msg;
+        function show(){
+            msg= confirm("are you sure")
+        }
+    </script>
+
+    <form onsubmit="show()" action="./action.html" method="post">
+        username <input type="text" name="username" id="u"><br><br>
+        password <input type="password" name="password" id="p"><br><br>
+        <input type="submit" value="submit">
+    </form> -->
+    
+
+    <!-- <form name="f" action="./action.html" method="post">
+        username <input type="text" name="username" id="u"><br><br>
+        password <input type="password" name="password" id="p"><br><br>
+        <input type="button" value="submit" onclick="show()">
+    </form>
+
+    <script>
+        function show(){
+            confirm('are you sure');
+            f.submit();
+        }
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ONFOCUS EVENT</h1> 
+
+    <!-- The onfocus event in JavaScript is triggered when an element gains focus.  -->
+     
+    Enter value of a <input type="text"  id="t1" onfocus="show()"><br><br>
+    Enter value of b <input type="text"  id="t2" onfocus="show1()"><br><br>
+    Result &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  id="t3" onfocus="show3()"><br><br>
+
+    <script>
+        function show(){
+            t1.value=12;
+        }
+        function show1(){
+            t2.value=8;
+        }
+        function show3(){
+            t3.value = parseInt(t1.value) * parseInt(t2.value);
+        }
+    </script>
+</body>
+</html>

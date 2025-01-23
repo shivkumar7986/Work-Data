@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JAVASCRIPT STRING PADDING</h1>
+
+    <script>
+        let text = "5";
+        let padded = text.padStart(5,"0");
+        console.log(padded);
+
+        let padded1 = text.padEnd(5,"*");
+        console.log(padded1)
+
+        // the padStart() method is a string method.
+        // to pad a number, convert the number to a string first.
+        let num = 8;
+        let txt = num.toString();
+        let padNum = txt.padEnd(4, "*");
+        console.log(padNum);
+    </script>
+</body>
+</html>

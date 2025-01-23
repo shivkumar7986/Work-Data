@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="openWindow" onclick="show()">
+    <input type="button" value="closeWindow" onclick="show1()">
+    <input type="button" value="moveWindow" onclick="show2()">
+    <input type="button" value="moveReverse" onclick="show3()">
+
+
+    <script>
+        var msg;
+        function show(){
+            msg = window.open("p1.html","", "height=500, width=500")
+        }
+
+        function show1(){
+            msg.close();
+        }
+        function show2(){
+            msg.moveBy(5,5);
+        }
+        function show3(){
+            msg.moveBy(-5,-5);
+        }
+    
+    </script>
+</body>
+</html>

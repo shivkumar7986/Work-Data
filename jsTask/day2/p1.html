@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="button1" onclick="show1()">
+    <input type="button" value="button2" onclick="show2()">
+
+    <script>
+        function show1(){
+            let val = prompt("enter a value");
+            alert("value = " + val)
+        }
+
+        function show2(){
+            let confirmation = confirm("do you want to delete")
+
+            if(confirmation){
+                alert("you selected deleted")
+            }
+            else{
+                alert("you select not to be deleted")
+            }
+        }
+    </script>
+</body>
+</html>

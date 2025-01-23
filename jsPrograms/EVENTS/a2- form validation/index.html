@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Username &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" id="t1"><br><br>
+    Password &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" id="t2"><br><br>
+    Confirm Password <input type="password" name="Cpassword" id="t3"><br><br>
+    Email Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <input type="text" name="email" id="t4"><br><br>
+
+    <input type="button" value="submit" onclick="validate()">
+
+    <script>
+        function validate(){
+            if(t1.value.trim()=="" || t2.value.trim()=="" || t3.value.trim()=="" || t4.value.trim()==""){
+            alert("Form can not be empty");
+            return;
+        }
+
+        if(t2.value != t3.value){
+            alert("password and confirm password must match");
+            return;
+        }
+        if(t4.value.indexOf('@')==-1 || t4.value.indexOf('.')==-1){
+            alert("email is not valid");
+            return;
+        }
+
+        alert("every thing is ok");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<script>
+    function person(first , last , age , gender){
+        this.firstName = first,
+        this.lastName = last,
+        this.age = age,
+        this.gender = gender
+    }
+
+    var mySelf = new person("shiv" , "kumar" , 21 , "male");
+    var  myBro = new person("nishant" , "mishra" , 23 , "male");
+
+
+     for(let i in mySelf){
+        document.write(`${i} : ${mySelf[i]} <br>`)
+     }
+
+     document.write(`<br><br>`)
+     for(let i in myBro){
+        document.write(`${i} : ${myBro[i]} <br>`)
+     }
+</script>

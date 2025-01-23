@@ -1,0 +1,18 @@
+<script>
+function show()
+{
+ t1.value=12;
+}
+function show1()
+{
+ t2.value=18;
+}
+function show3()
+{
+ t3.value = parseInt( t1.value )  * parseInt(t2.value );
+}
+</script>
+
+Enter value of a <input type="text" id="t1" onBlur="show()" >
+Enter value of a <input type="text" id="t2" onBlur="show1()" >
+Result <input type="text" id="t3" onFocus="show3()"  >

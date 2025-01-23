@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="radio" name="radio" id="r1">BMW <br>
+    <input type="radio" name="radio" id="r2">MERCEDES <br>
+    <input type="radio" name="radio" id="r3">DEFENDER <br>
+    <input type="radio" name="radio" id="r4">SUPRA <br><br>
+
+    <button id="btn">click to see</button> <br>
+
+    <img id="img" src="" alt="" height="500" width="800" style="margin-top: 30px; display: none; object-fit: cover; ;">
+
+    <script>
+
+        var btn = document.getElementById("btn");
+        var r1= document.getElementById("r1")
+        var r2= document.getElementById("r2")
+        var r3= document.getElementById("r3")
+        var r4= document.getElementById("r4")
+        var img = document.getElementById("img");
+
+        btn.addEventListener("click",()=>{
+            if(r1.checked){
+                img.style.display = "block";
+                img.src = "https://images7.alphacoders.com/135/thumb-1920-1358130.png"
+            }
+            else if(r2.checked){
+                img.style.display = "block";
+                img.src = "https://images5.alphacoders.com/323/thumb-1920-323633.jpg"
+            }
+            else if(r3.checked){
+                img.style.display = "block";
+                img.src = "https://images.alphacoders.com/136/thumb-1920-1368958.jpeg"
+            }
+            else if(r4.checked){
+                img.style.display = "block";
+                img.src = "https://i.pinimg.com/originals/53/c9/2b/53c92ba60fa8c43ea717a1daac2acaac.png"
+            }
+            else{
+                alert("must select somthing")
+            }
+        })
+
+    </script>
+</body>
+</html>

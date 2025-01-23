@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 style="text-align: center;"> <u>Choose Your Favroite  Season</u> </h1>
+
+   <input type="radio" name="season" id="r1" value="Winter"> Winter <br>
+   <input type="radio" name="season" id="r2" value="Rainy"> Rainy <br>
+   <input type="radio" name="season" id="r3" value="Monsoon"> Monsoon <br>
+   <input type="radio" name="season" id="r4" value="Summer"> summer <br> <br>
+
+   <button id="btn">clickMe</button>
+
+   <h3 id="disp" style="color: green;"></h3>
+   <h3 id="err" style="color: red;"></h3>
+
+   <script>
+    
+    var btn = document.getElementById("btn");
+    var dis = document.getElementById("disp");
+    var err = document.getElementById("err")
+
+    btn.addEventListener("click" , ()=>{
+       var m =   document.querySelector('input[name = "season"]:checked')
+        if(m != null){
+        dis.innerHTML = `${m.value} season selected`
+        err.innerHTML = "";
+       }
+       else{
+        err.innerHTML = "must select a season"
+       }
+    })
+
+   </script>
+</body>
+</html>

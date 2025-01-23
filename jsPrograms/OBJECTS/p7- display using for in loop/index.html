@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DISPLAY  PROPERTIES IN A LOOP</h1>
+    <div id="p"></div>
+
+    <script>
+        const person = {
+            name: "shiv",
+            age: 22,
+            city : "chandigarh"
+        };
+
+        let text=" ";
+        for(let x in person){
+            text += person[x] + " ";
+        };
+
+        document.getElementById('p').innerHTML = text;
+    </script>
+    
+</body>
+</html>

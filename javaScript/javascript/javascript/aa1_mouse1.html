@@ -1,0 +1,20 @@
+<form>
+
+<input type="text" id="status" value="Not over the link"/>
+
+<br>
+<script>
+
+function show()
+{
+document.getElementById('status').value='Over the link';
+}
+function show1()
+{
+document.getElementById('status').value='Not over the link'
+}
+</script>
+
+<a href="" onmouseover="show()" onmouseout="show1()">Movethe mouse over me!</a>
+
+</form>

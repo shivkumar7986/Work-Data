@@ -1,0 +1,14 @@
+function cal(){
+            ans.value=eval(ans.value);
+        }
+        function add(a)
+        {
+            ans.value=ans.value+a;
+        }
+        function c()
+        {
+            ans.value="";
+        }
+        function del(){
+            ans.value = ans.value.substr(0, ans.value.length -1);
+        }

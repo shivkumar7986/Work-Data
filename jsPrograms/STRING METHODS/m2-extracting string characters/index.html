@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EXTRACTING STRING CHARACTERS</h1>
+    <h3>there are 4 methods for extracting string characters:</h3>
+    <ul>
+        <li>The at(position) Method</li>
+        <li>The charAt(position) Method</li>
+        <li>The charCodeAt(position) Method</li>
+        <li>using proterty access [] like in arrays</li>
+    </ul>
+    <hr>
+    <script>
+        let stringText = "Educated";
+        document.write("text =" + stringText + "<br><br>");
+
+        document.write(" 1--javaScript String charAt(index) <br><br>");
+        //The charAt() method returns the character at a specified index (position) in a string:
+        let charidx = stringText.charAt(0);
+        let charidx1 = stringText.charAt(1);
+        document.write("character at 0th index of string = " +charidx + "<br><br>");
+        document.write("character at 0th index of string =" + charidx1 + "<br><br><br>");
+        
+
+        document.write(" 2--javaScript String charCodeAt(index) <br><br>");
+        //The charCodeAt() method returns the code of the character at a specified index in a string:The method returns a UTF-16 code (an integer between 0 and 65535).
+
+        let charCodeidx = stringText.charCodeAt(2);
+        document.write("character code at 0th index of string = " +charCodeidx + "<br><br><br>");
+
+        // at() method
+        document.write(" 3--javaScript String at(index) <br><br>");
+        let idx = stringText.at(3);
+        document.write("character at string = " +idx + "<br><br><br>");
+
+        //property Acess[] 
+        document.write(" 4--javaScript String property access [] <br><br>");
+        let char = stringText[5];
+        document.write("character at string = " +char + "<br><br>");
+    </script>
+</body>
+</html>

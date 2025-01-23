@@ -1,0 +1,7 @@
+<form action="/assignpswd" method="post">
+    <input type="hidden" name="empId" id="empId" value="<%= results[0].id %>" />
+    ID: <input type="number" name="id" id="id" />
+    Username: <input type="text" name="username" id="username" value="<%= results[0].name %>"><br>
+    password: <input type="password" name="password" id="password" ><br>
+    <input type="submit">
+</form>

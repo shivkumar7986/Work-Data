@@ -1,0 +1,14 @@
+<button id="show" onclick="show1()">Show Data</button>
+<div id="data">
+
+    <script>
+        var datadiv = document.getElementById("data");
+        var userName = localStorage.getItem("userName");
+        var pass = localStorage.getItem("password");
+
+        function show1(){
+            datadiv.innerHTML = ` Username : ${userName}<br> Password : ${pass}`
+        }
+        
+    </script>
+</div>

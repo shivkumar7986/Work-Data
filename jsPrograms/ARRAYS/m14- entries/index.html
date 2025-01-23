@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u>ENTRIES METHOD</u></h1>");
+
+        let arr = [1,2,3,4];
+        document.write("array =" + arr + "<br>");
+        
+        let iterator = arr.entries();
+        document.write("iterators =" + iterator + "<br>");
+
+        for(let entry of iterator){
+            document.write(entry + "<br>" )
+        }
+    </script>
+</body>
+</html>

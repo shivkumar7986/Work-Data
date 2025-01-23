@@ -1,0 +1,45 @@
+<body onload="addingdata()">
+    
+
+<h1>welcome to coustomer home</h1>
+
+
+<h2>yours data</h2>
+
+{{#each results}}
+Name <input type="text" value="{{username}}" id="n"> <br>  
+Passowrd <input type="text" value="{{ userpassword }}"  id="p">
+
+
+<a href="/userlist">All user data</a>
+
+
+{{/each}}
+
+</body>
+<script>
+
+
+
+   function addingdata(){
+     var n = document.getElementById('n')
+    var pass = document.getElementById('p')
+
+    var userArr = JSON.parse(localStorage.getItem("userDt")) || [];
+
+    var person = new Object();
+    person.username = n.value;
+    person.password = p.value
+   
+    userArr.push(person);
+
+    localStorage.setItem("userDt" , JSON.stringify( userArr));
+
+    console.log(user)
+   
+   }
+    
+   
+
+   
+</script>

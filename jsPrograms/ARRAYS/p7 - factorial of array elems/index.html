@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1><u> FACTORIAL OF ELEMENTS</u></h1>");
+      // Array of number
+      let number = [1,2,3,4,5];
+      
+      // Array to store the factorials
+      let factorial  =[];
+
+      //iterate through the array and calculate the factorial for each elements
+      for(let i = 0 ; i<number.length ; i++){
+        let num = number[i];
+        let result = 1;
+
+        //calculate the factorial using a loop
+        for(let j = 1; j<=num ; j++){
+            result = result * j;
+        }
+        // store the factorial in the factorials array
+        factorial.push(result);
+      }
+      // print the result
+      for(let i = 0; i<number.length ; i++){
+        document.write(`factorial of ${number[i]} is ${factorial[i]} <br>`);
+      }
+    </script>
+  </body>
+</html>

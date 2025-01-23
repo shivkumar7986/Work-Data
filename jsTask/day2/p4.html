@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onfocus="show2()" id="t1"><br><br>
+    <input type="text"  onblur="show1()" id="t2">
+
+
+
+    <script>
+        function show(){
+            t1.value = "3"
+        }
+        function show1(){
+            t2.value = "hyyy"
+        }
+        function show2(){
+            t1.value = "onchange is working✅"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<table id="table" border="1"></table>
+<br>
+<button id="btn" onclick="removechild()">remove child</button>
+
+<script>
+    var table = document.getElementById("table")
+    for(let i = 0 ; i<10 ; i++){
+        var row = document.createElement("tr")
+
+        for(let j = 0 ; j<10 ; j++){
+            var data = document.createElement("td")
+
+            var checkbox = document.createElement("input")
+            checkbox.type = "checkbox"
+
+            data.appendChild(checkbox);
+
+            row.appendChild(data)
+        }
+
+        table.appendChild(row);
+    }
+
+
+    function removechild(){
+        while(table.firstChild){
+            table.removeChild(table.firstChild);
+        }
+    }
+</script> 

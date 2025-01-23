@@ -1,0 +1,20 @@
+<!-- user will ask for a number between 0 se 9 and if the number is below 5 resolve if not reject -->
+
+
+<script>
+    var num = Math.floor(Math.random()*10)
+    console.log(num)
+
+    var myPromis = new Promise((res, rej)=>{
+        if(num<5){
+            return res();
+        }
+        else{
+            return rej();
+        }
+    })
+
+    myPromis
+        .then(function(){console.log("below 5")})
+        .catch(function(){console.log("above 5")})
+</script>

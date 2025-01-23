@@ -1,0 +1,17 @@
+<button onclick="show()">Show Data</button> <br><br>
+
+<div id="data">
+
+</div>
+
+
+<script>
+    var datadiv = document.getElementById("data");
+    var dataArr = JSON.parse( localStorage.getItem("persons"));
+
+   function show(){
+    for(let i in dataArr){
+        datadiv.innerHTML += ` NAME : ${dataArr[i].name} <br> ADDRESS : ${dataArr[i].address} <br> CITY : ${dataArr[i].city} <br> PHONE_NO.  : ${dataArr[i].phone}<br><br>`
+    }
+   }
+</script>

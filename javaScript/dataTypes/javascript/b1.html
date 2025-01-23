@@ -1,0 +1,19 @@
+
+<script>
+// WAP to define different colors in array and use them as font
+function show()
+ {
+   var color = ["red","green","blue","pink","purple","yellow","cyan"]
+   for(i=0;i<color.length;i++)
+   {
+   p.innerHTML += "<font color="+color[i]+" size=40 > WELCOME TECHNOLOGY</font><br>";
+
+   // p.innerText += "<font color="+color[i]+" size=40 > WELCOME TECHNOLOGY</font><br>";
+   }
+
+ }
+
+</script>
+
+<div id="p"></div>
+<input type="button" value="show colors"  onclick="show()">

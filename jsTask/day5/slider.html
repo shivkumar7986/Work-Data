@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" style="height: 100vh;  display: flex; 
+    align-items: center; justify-content: center; gap: 40px; background-color: rgb(243, 220, 245);">
+
+        <button id="leftBtn" style="padding: 10px 30px; border-radius: 20px; border: 1px solid #aaa; color: #333;
+        "><</button>
+
+        <img id="img" src="1.png" alt="" height="550" width="800" style="border-radius: 20px; object-fit: cover;transition: all ease 0.3s;">
+
+        <button id="rightBtn" style="padding: 10px 30px; border-radius: 20px; border: 1px solid #aaa; color: #333;">></button>
+        
+    </div>
+
+    <script>
+        var leftBtn = document.getElementById("leftBtn"); 
+        var rightBtn = document.getElementById("rightBtn"); 
+        var img = document.getElementById("img")
+
+        const imgArr = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png"];
+
+        var currentIdx = 0;
+        leftBtn.addEventListener("click",()=>{
+            if(currentIdx > 0){
+                currentIdx --;
+            }
+            else{
+                currentIdx = imgArr.length - 1;
+            }
+
+             img.src  = imgArr[currentIdx]
+        })
+
+        rightBtn.addEventListener("click",()=>{
+            if(currentIdx < imgArr.length -1){
+                currentIdx ++;
+            }
+            else{
+                currentIdx = 0;
+            }
+
+             img.src  = imgArr[currentIdx]
+        })
+    </script>
+</body>
+</html>

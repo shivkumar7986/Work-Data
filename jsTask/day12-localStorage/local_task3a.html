@@ -1,0 +1,49 @@
+<div id="m">
+    <select name="c1" id="c1" >
+        <option> select the city </option>
+    </select>
+    <br><br>
+   
+</div>
+
+<div id="k">
+
+</div>
+
+
+<script>
+    
+    var cityData = JSON.parse(localStorage.getItem("data"));
+    console.log(cityData)
+
+
+        function show(){
+            var i = c1.selectedIndex;
+            var s = c1[i].value;
+            var k = document.getElementById("k")
+
+
+            for(let i in cityData){
+                if(cityData[i].city == s){
+                    k.innerHTML =  "<br>Maximum Temprature : " + cityData[i].max_temperature +" Minimum Temprature :" +cityData[i].min_temperature;
+                    break;
+
+                }
+            }
+        }
+    
+
+        function addingToDropdown(){
+            var d = "<select name=c1 id=c1 onchange=show()><option>select the city</option>"
+
+            for(let i in cityData){
+                d += "<option>"+(cityData[i].city)+"</option>"
+            }
+
+            d += "</select>"
+            m.innerHTML = d
+
+        }
+        addingToDropdown()
+   
+</script>

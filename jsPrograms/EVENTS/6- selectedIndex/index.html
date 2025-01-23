@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> ONCHNAGE EVENT ,  SELECTED INDEX</h1>
+
+    <select id="c1" onchange="show()">
+        <option > Reading</option>
+        <option > Writing</option>
+        <option > Listening</option>
+        <option > Music</option>
+    </select>
+
+
+    <script>
+        function show(){
+            var a = c1.selectedIndex;
+            var b = c1[a].text;
+            alert("your selected value = " + b);
+        }
+    </script>
+</body>
+</html>

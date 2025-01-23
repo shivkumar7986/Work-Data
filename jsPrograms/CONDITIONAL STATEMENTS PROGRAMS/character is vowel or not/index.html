@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      
+      // CHECK THE CHARACTER IS VOWEL OR NOT
+
+      document.write(
+        "<h1><u>CHECK THE CHARACTER IS VOWEL OR NOT</u></h1>" + "<br>"
+      );
+
+      var char = "e";
+
+      document.write("character = " + char + "<br>");
+
+      if (
+        char == "a" ||
+        char == "e" ||
+        char == "i" ||
+        char == "o" ||
+        char == "u"
+      ) {
+        document.write(`character ${char} is vowel`);
+      } else if (
+        char == "A" ||
+        char == "E" ||
+        char == "I" ||
+        char == "O" ||
+        char == "U"
+      ) {
+        document.write(`character ${char} is vowel`);
+      } else {
+        document.write(`character ${char} is constant`);
+      }
+
+      document.write("<hr>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>STRING INDEXOF()</h1>
+
+    <script>
+        //The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+
+        let text = "please locate where 'locate' occurs!";
+
+        document.write(text + "<br>");
+        let idx = text.indexOf("locate");
+        document.write(idx + "<br>");
+        
+
+        //The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+        let lstIdx = text.lastIndexOf("locate");
+        document.write(lstIdx);
+    </script>
+</body>
+</html>

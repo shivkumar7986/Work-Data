@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>SETS IN JAVASCRIPT</h1>
+    <p>
+      A JavaScript Set is a collection of unique values. Each value can only
+      occur once in a Set. The values can be of any type, primitive values or
+      objects.
+    </p>
+    
+    <script>
+        const letter = new Set(["4", "b" ,"c"]);
+
+        letter.add(5);
+        letter.add(null);
+        
+        for(let x of letter){
+            document.write(x+ "<br>")
+        }
+    </script>
+  </body>
+</html>

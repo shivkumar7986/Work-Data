@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MATCH() & MATHCALL()</h1>
+
+    <script>
+        //The match() method returns an array containing the results of matching a string against a string (or a regular expression)
+
+        let str = "The rain in SPAIN stays mainly in the plain";
+
+        // perform a search for "ain"
+        let newStr = str.match("ain");
+        console.log(newStr);
+
+        //perfrom a search for "ain" using regular expression
+        let newStr1 = str.match(/ain/);
+        console.log(newStr1);
+
+        //perfrom a global search for "ain"
+        let newStr2 = str.match(/ain/g);
+        console.log(newStr2);
+
+        //perform a global, case-insensitive search for "ain";
+        let newStr3 = str.match(/ain/gi);
+        console.log(newStr3);
+
+        //JAVASCRIPT STRING MATCHALL()
+        //The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression)
+
+        let txt = "I love cats. Cats are very easy to love. Cats are very popular.";
+        let newTxt = txt.matchAll("Cats");
+
+        let arr = Array.from(newTxt);
+        console.log(arr);
+    </script>
+</body>
+</html>

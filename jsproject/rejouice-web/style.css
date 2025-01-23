@@ -1,0 +1,150 @@
+@font-face {
+    font-family: big;
+    src        : url(./Rejouice-Headline.ttf);
+}
+
+@font-face {
+    font-family: small;
+    src        : url(./NBInternationalProBoo.ttf);
+}
+
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: small;
+}
+
+html,
+body {
+    height: 100%;
+    width : 100%;
+}
+
+#main {
+    /* width: 100%; */
+    background-color: #FAF8F3;
+}
+
+#page1 {
+    height             : 100vh;
+    width              : 100%;
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+}
+
+ #crsr {
+    height          : 6.5vw;
+    width           : 6.5vw;
+    background-color: #ff5f38;
+    border-radius   : 50%;
+    position        : fixed;
+    z-index         : 9;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    transform       : translate(-50%, -50%);
+    opacity: 0;
+}
+
+#crsr h5 {
+    font-size  : 1vw;
+    font-weight: 500;
+}
+
+#page1 video {
+    height    : 100%;
+    width     : 100%;
+    object-fit: cover;
+    position  : absolute;
+}
+
+#page1 #page1-content {
+    height          : 100%;
+    width           : 100%;
+    background-color: #00000028;
+    position        : relative;
+    z-index         : 10;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    flex-direction  : column;
+    padding-bottom: 4vw;
+}
+
+#page1-content nav h3 {
+    color      : #fff;
+    font-size  : 1.4vw;
+    font-weight: 500;
+}
+
+#page1-content nav {
+    padding            : 0 3vw;
+    padding-top        : 3vw;
+    display            : flex;
+    justify-content    : space-between;
+    /* background-color: red; */
+    width              : 100%;
+}
+
+#page1-content .txt{
+    /* background-color: red; */
+    overflow: hidden;
+    /* height: 30vw; */
+    /* padding: -10vw 0; */
+}
+
+#page1-content h1 span {
+    color      : #FFFCF1;
+    font-family: "big";
+    font-size  : 27vw;
+    /* padding : 0 3vw; */
+    font-weight: 100;
+    line-height: 24vw;
+    display: inline-block;
+
+}
+
+
+
+/* ---------PAGE2------------- */
+#page2 {
+    height          : 100vh;
+    width           : 100%;
+    background-color: #FAF8F3;
+    padding: 6vw 2.8vw;
+    position: relative;
+    z-index: 20;
+}
+
+#p2top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1vw;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+
+}
+#p2top h1{
+    font-size: 1.6vw;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+#p2btm{
+    /* background-color: red; */
+    padding: 1vw;
+}
+
+#p2btm .elem{
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+#p2btm .elem h1{
+    font-size: 4vw;
+    font-weight: 500;
+    /* background-color: red; */
+    /* overflow: hidden; */
+}

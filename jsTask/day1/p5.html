@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter 3 digit no." id="t1"><br><br>
+    <input type="button" value="reverse" onclick="reverse()">
+
+    <div id="p">
+
+    </div>
+
+    <script>
+        function reverse(){
+            let num = parseInt(t1.value);
+
+            let lastNum = num % 10;
+            let midNum = Math.floor(num / 10) % 10;
+            let firstNum = Math.floor(num / 100) % 10;
+
+            let reverse = lastNum * 100 + midNum * 10 + firstNum;
+            p.innerHTML = "reverse number = " + reverse;
+        }
+    </script>
+</body>
+</html>

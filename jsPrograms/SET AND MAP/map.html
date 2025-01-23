@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MAP IN JAVASCRIPT</h1>
+
+    <script>
+        const fruits = new Map([
+            ["apple",500],
+            ["banana",400],
+            ["oranges",300],
+        ]);
+
+        for(let x of fruits){
+            document.write(x + "<br>")
+        }
+
+        document.write(fruits.get("apple")+ "<br>");
+        document.write(fruits.get("banana"));
+
+
+        
+    </script>
+</body>
+</html>

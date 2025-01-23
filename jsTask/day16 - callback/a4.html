@@ -1,0 +1,28 @@
+<script>
+    var myPromis = new Promise((resolve, reject) => {
+        let num = 5;
+
+        if (num === 5) {
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact = fact * i
+            }
+
+            resolve(`Factorial of ${num} : ${fact}`)
+
+        } else {
+            var pow = Math.pow(num, 2)
+
+            reject(`Power of ${num} : ${pow}`)
+        }
+
+    })
+
+
+    myPromis.then(
+        function (value) { document.write(value); }, 
+        function (error) { document.write(error); }
+    );
+
+
+</script>

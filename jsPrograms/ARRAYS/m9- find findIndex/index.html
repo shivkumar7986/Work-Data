@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         document.write("<h1><u>FIND & FINDINDEX METHOD</u></h1>"); 
+        let array = [1,2,7,4,5];
+        document.write("array = " + array + "<br>");
+        
+        //Returns the value of the first element in the array that satisfies the provided testing function.
+        let firstEvenNumber = array.find(x=> x%2===0);
+        document.write("first even number = " + firstEvenNumber + "<br>");
+        
+        //Returns the index of the first element in the array that satisfies the provided testing function
+        let firstEvenNumberIndex = array.findIndex(x=> x%2===0);
+        document.write("index of first even number = " + firstEvenNumberIndex + "<br>");
+    </script>
+</body>
+</html>

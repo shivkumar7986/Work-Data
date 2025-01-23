@@ -1,0 +1,27 @@
+<link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+ <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+ <a href="http://localhost:8888/">Back</a>
+<h1>Profile</h1>
+
+
+<table class="table table-hover" >
+    <thead>
+      <tr class="warning">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+       <% results.forEach(function(name) { %>
+       <tr class="table-info">
+         <td><%= name.id %></td>
+         <td><%= name.name %></td>
+         <td><%= name.salary %></td>
+         <td><%= name.age %></td>
+
+       </tr>
+      <% }); %>
+     </tbody>
+   </table>

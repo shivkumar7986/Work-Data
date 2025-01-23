@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="nav" class=" w-full bg-teal-500 px-8 py-8 flex justify-between items-center rounded-xl mb-6">
+        <img class="h-12 w-12 rounded-full"
+            src="https://i.pinimg.com/originals/53/a6/a0/53a6a08201c6ff216663e1faa5ebf365.jpg">
+        <h1 class=" text-slate-100  text-2xl">YOUR STORE DATA</h1>
+        <h1 class=" text-slate-100  text-2xl">24 x 7</h1>
+
+    </div>
+
+   <div id="l" class="w-full flex items-center justify-center my-10" > <a class="bg-teal-200 py-2 px-4 mx-4   rounded-md  " href="/addproduct">Add Products</a></div>
+
+    <h1 class="mt-10 ml-28 text-2xl ">Availabel Products:</h1> <br>
+
+     <div id="div" class=" w-full flex items-center justify-center ">
+
+       
+
+         <table class="w-3/4 border-2 border-teal-200  ">
+        <thead class="bg-teal-300 border-b-2 brorder-gray-800 ">
+            <tr>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">ID</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">PRODUCT</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">PRICE</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">DATE</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">ACTION</th>
+                <th class="p-3 text-sm font-semibold tracking-wide text-left">UPDATE</th>
+            </tr>
+        </thead>
+         {{#each result}}
+             <tr class="border-2">
+                 <td class="p-3 text-sm font-semibold text-left">{{id}}</td>
+                 <td class="p-3 text-sm font-semibold text-left">{{products}}</td>
+                 <td class="p-3 text-sm font-semibold text-left">{{price}}</td>
+                 <td class="p-3 text-sm font-semibold text-left">{{date}}</td>
+                 <td class="p-3 text-sm font-semibold text-left"><a href="/deleteproduct/{{id}}" class="bg-red-500 py-1 px-4 rounded-xl text-white" >DELETE</a></td>
+                 <td class="p-3 text-sm font-semibold text-left"><a href="/editproducts/{{id}}" class="bg-teal-500 py-1 px-4 rounded-xl text-white" >UPDATE</a></td>
+            </tr>
+             {{/each}}
+    </table>
+
+   
+    
+     </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.write("<h1><u> INPUT ELEMENTS AND PRINT +NUM & -NUM</u></h1>");
+        let arr = [];
+        let size = prompt("enter size :");
+
+        for(let i = 0 ; i<size ; i++)
+        {
+         arr[i] = prompt(`enter ${i} index :`);    
+        }
+        
+        for(let j = 0 ; j<arr.length ; j++){
+            if(arr[j]<0){
+                document.write("negitive numbers = " + arr[j]);
+            }
+            
+        }
+
+        for(let k = 0; k<arr.length ; k++){
+            if(arr[k]>0){
+                document.write("positive numbers = " + arr[k]);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

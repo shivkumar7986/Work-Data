@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="padding: 0.3vw 2vw;"></table>
+    Enter Products ID : <input type="number"  id="id"> 
+    <button id="btn">Show Data</button>
+    <div id="opDiv">
+
+    </div>
+
+    <script>
+        var idField = document.getElementById("id");
+        var showBtn = document.getElementById("btn");
+        
+        var s = `<table border = 2 ><th style="padding: 0.3vw 2vw;">ID <th>Image <th>Category <th> Title <th>Discount <th>price <th>Description <th>Warranty`;
+
+        function demo(data){
+          showBtn.addEventListener("click" , ()=>{
+            for(let i in data.products){
+                console.log(data.products[i])
+                if(data.products[i].id == idField.value){
+                    s += `<tr><th>${data.products[i].id} <th> <image src =${data.products[i].images[0]} width=80 height = 80 > <th>${data.products[i].category}  <th>${data.products[i].title} <th>${data.products[i].discountPercentage}% <th>${data.products[i].price} <th> ${data.products[i].description} <th> ${data.products[i].warrantyInformation}`;
+                }
+            }
+
+            s += `</table>`;
+            opDiv.innerHTML = s;
+          })
+        }
+
+        
+        
+
+
+       
+       
+        fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(data => demo(data));
+    </script>
+</body>
+</html>

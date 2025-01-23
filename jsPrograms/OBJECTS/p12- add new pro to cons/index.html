@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ADDING A PROPERTY TO A CONSTRUCTOR</h1>
+    <div id="p"></div>
+
+    <script>
+        function person(name , age , city ){
+            this.name = name,
+            this.age = age,
+            this.city = city
+        }
+
+        const mySelf = new person ("shiv" , 22 , "chandigarh");
+
+        const myBro = new person("shayam" , 19 , "chandigarh")
+
+       //adding new property to person function , it can't work without prototype , you have to use this .
+
+       person.prototype.nationality = "indan";
+
+       //displaying
+
+       document.getElementById('p').innerHTML = mySelf.name + " and " + myBro.name + " are " + mySelf.nationality
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // INPUT 3 VARIABLES AND CHECK SIMILARITIES
+
+      document.write("<h1><u> SIMILARITIES B/W 3 VARIABLES </u></h1>");
+      var n1 = 35;
+      var n2 = 35;
+      var n3 = 37;
+
+      document.write("n1 = " + n1 + "<br>");
+      document.write("n2 = " + n2 + "<br>");
+      document.write("n3 = " + n3 + "<br>");
+
+      if (n1 === n2 && n2 === n3) {
+        document.write("all the variables are equal");
+      } else if (n1 === n2 || n2 === n3 || n3 === n1) {
+        document.write("atleast two variables are equal");
+      } else {
+        document.write(" no similarities found b/w variables");
+      }
+
+      document.write("<hr>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+name :<input type="text" id="name"><br><br>
+address :<input type="text" id="address"><br><br>
+city :<input type="text" id="city"> <br><br>
+phone :<input type="number" id="phoneNo"><br><br>
+
+<button id="saveBtn" onclick="addPersonData()">Save Data</button>
+<button><a href="./local_task2a.html">Show Data</a></button>
+
+
+<script>
+    var pname = document.getElementById("name");
+    var address = document.getElementById("address");
+    var city = document.getElementById("city");
+    var phone = document.getElementById("phoneNo");
+
+    var personArr = [];
+
+    function addPersonData() {
+        if (pname.value == "" || address.value == "" || city.value == "" || phone.value == "") {
+            alert("please fill all the fields!!")
+        }
+        else {
+            var obj = new Object();
+            obj.name = pname.value;
+            obj.address = address.value;
+            obj.city = city.value;
+            obj.phone = phone.value;
+
+            pname.value = "";
+            address.value = "";
+            city.value = "";
+            phone.value = "";
+
+            personArr.push(obj);
+
+            localStorage.setItem("persons", JSON.stringify(personArr));
+
+            alert("Added succesfully!!");
+        }
+    }
+</script>

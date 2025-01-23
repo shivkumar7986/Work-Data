@@ -1,0 +1,26 @@
+
+
+<script>
+
+    var myPromis = new Promise((resolve, reject) => {
+        if (false) {
+            return resolve();
+        }
+        else {
+            return reject();
+        }
+    })
+
+    myPromis
+        .then(function () {
+            console.log("resolve ho gya")
+        })
+        .catch(function () {
+            console.log("rejectg ho gya!")
+        })
+
+
+    
+
+    
+</script>

@@ -1,0 +1,71 @@
+.ftco-section {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(34,175,178,1) 35%, rgba(0,212,255,1) 100%);;
+    padding: 3rem 0;
+    height: 100vh;
+  }
+  
+  .heading-section {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .wrap {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .img {
+    background: url('https://images.unsplash.com/photo-1724922637156-a3d59eb3d061?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    height: 150px;
+  }
+  
+  .login-wrap {
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #6e8efb;
+    box-shadow: 0px 0px 8px rgba(110, 142, 251, 0.3);
+  }
+  
+  .btn-primary {
+    background: #6e8efb;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #a777e3;
+  }
+  
+  .checkbox-wrap input[type="checkbox"] {
+    accent-color: #6e8efb;
+  }
+  
+  .social-icon {
+    color: #6e8efb;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #fff;
+    background: #6e8efb;
+  }
+  

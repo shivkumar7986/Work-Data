@@ -1,0 +1,128 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: Poppins;
+}
+
+html,
+body {
+    height: 100%;
+    width : 100%;
+}
+
+#main {
+    height          : 100%;
+    width           : 100%;
+    background-image: linear-gradient(90.5deg, rgba(152, 45, 255, 1) 0.7%, rgba(90, 241, 255, 1) 51.5%, rgba(65, 239, 164, 1) 100.6%);
+}
+
+.todo{
+    width: 30%;
+    /* height:60px; */
+    background-color: #fff; 
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 30px;
+    border-radius: 20px;
+  
+}
+
+.heading{
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    color: #002765;
+}
+
+.heading img{
+    height: 60px;
+    width: 60px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.row input {
+ flex: 1;
+ border: none;
+ outline: none;
+ padding: 10px;
+ background-color: transparent;
+}
+
+.row button{
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: #ff5945;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+ul li{
+    list-style: none;
+    font-size: 20px;
+   padding-top: 20px;
+   padding-left: 100px;
+   padding-bottom: 20px;
+    
+    user-select: none;
+    position: relative;
+    text-transform: capitalize;
+    cursor: pointer;
+    /* background: blue; */
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: url(./ing/unchecked.png);
+    background-size: cover;
+    background-position: center ;
+    top: 20px;
+    left: 8px;
+}
+
+ul li.checked {
+    columns: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(./ing/checked.png);
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0%;
+    top: 24%;
+    /* background: red; */
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}

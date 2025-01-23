@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="t1" placeholder="enter num 1"><br><br>
+    <input type="text" id="t2" placeholder="enter num 2"><br><br>
+    <input type="text" id="t3" placeholder="enter num 3"><br><br>
+
+    <input type="button" value="findHighest" onclick="findHighest()">
+
+    <div id="p">
+
+    </div>
+
+    <script>
+
+
+        function findHighest() {
+            var a = parseInt(t1.value);
+            var b = parseInt(t2.value);
+            var c = parseInt(t3.value);
+            if (a > b && a > c) {
+                p.innerHTML = `${a} is highest`
+            }
+            else if (b > a && b > c) {
+                p.innerHTML = `${b} is highest`
+            }
+            else {
+                p.innerHTML = `${c} is highest`
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

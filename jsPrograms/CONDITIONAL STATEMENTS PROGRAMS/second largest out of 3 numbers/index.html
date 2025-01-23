@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 3 VARIABLE FIND  SECOND HIGHEST
+
+      document.write(
+        "<h1><u>3 VARIABLE FIND THE SECOND HIGHEST</u></h1>" + "<br>"
+      );
+
+      var a = 55;
+      var b = 30;
+      var c = 50;
+
+      document.writeln("a = " + a + "<br>");
+      document.writeln("b = " + b + "<br>");
+      document.writeln("c = " + c + "<br>");
+
+      if (a > b && a > c) {
+        if (b > c) {
+          document.write(`b = ${b} is second largest`);
+        } else {
+          document.write(`c = ${c} is second largest`);
+        }
+      } else if (b > c && b > a) {
+        if (c > a) {
+          document.write(`c = ${c} is second largest`);
+        } else {
+          document.write(`a = ${a} is second largest`);
+        }
+      } else {
+        if (b > a) {
+          document.write(`b = ${b} is second largest`);
+        } else {
+          document.write(`a = ${a} is second largest`);
+        }
+      }
+
+      document.write("<hr>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<div id="heading" style="text-align: center; padding:0.4vw 1vw; font-family: poppins; color: rgb(219, 162, 18);">
+    <h1>BANK STATEMENTS</h1>
+</div>
+<div id="allusers" style="display: flex; justify-content: space-between; padding: 0 3vw;">
+    <div id="allusers1" style="background-color:antiquewhite; padding: 1vw; border-radius: 10px;">
+
+    </div>
+
+    <div id="allusers2" style="background-color:antiquewhite; padding: 1vw; border-radius: 10px;">
+
+    </div>
+</div>
+
+<div id="q1"
+    style="padding: 2vw 3vw; background-color: antiquewhite; margin: 1vw auto;  display: flex; align-items: center; justify-content: space-between; gap:2vw; border-radius: 20px; width: 60%;">
+    <h3 style="font-family: poppins; color: rgb(161, 119, 64);">select the range :</h3>
+    <div id="inputs">
+        <input type="date" id="d1"
+            style="padding: 0.5vw 1vw; border-radius: 20px; border: 1px solid burlywood;outline: none;">
+        <input type="date" id="d2"
+            style="padding: 0.5vw 1vw; border-radius: 20px; border: 1px solid burlywood;outline: none;">
+    </div>
+    <button
+        style="padding:  1vw; border-radius: 20px; background-color: burlywood; border: none; color: #fff; text-transform: uppercase;"
+        onclick="show()">get the entry </button>
+</div>
+<div id="outputQ1"
+    style="background-color: rgb(176, 244, 176); padding: 0vw 3vw;text-align: center; width: 80%; margin: 1vw auto; border-radius: 10px;">
+
+</div>
+
+
+<div id="q2"
+    style="padding: 2vw 3vw; background-color: antiquewhite; margin: 1vw auto;  display: flex; align-items: center; justify-content: space-between; gap:2vw; border-radius: 20px; width: 60%;">
+    <h3 style="font-family: poppins; color: rgb(161, 119, 64); white-space: nowrap;">for perticular account:</h3>
+    <div id="inputs" style="display: flex; gap: 0.5vw;">
+        <input type="date" id="date1"
+            style="padding: 0.5vw 1vw; border-radius: 20px; border: 1px solid burlywood;outline: none;">
+        <input type="date" id="date2"
+            style="padding: 0.5vw 1vw; border-radius: 20px; border: 1px solid burlywood;outline: none;">
+        <input type="text" id="accNo" placeholder="enter account no."
+            style="padding: 0.5vw 1vw; border-radius: 20px; border: 1px solid burlywood;outline: none;">
+    </div>
+
+    <button
+        style="padding:  1vw; border-radius: 20px; background-color: burlywood; border: none; color: #fff; text-transform: uppercase;white-space: nowrap;" onclick="show1()">get the
+        entry </button>
+</div>
+<div id="outputQ2"
+    style="background-color: rgb(176, 244, 176); padding: 0vw 3vw;text-align: center; width: 80%; margin: 1vw auto; border-radius: 10px;">
+
+</div>
+
+
+
+<script>
+    function bank(acc_no, debit, credit, transaction_date, balance) {
+        this.accountNO = acc_no,
+            this.debit = debit,
+            this.credit = credit,
+            this.transactionDate = transaction_date,
+            this.balance = balance
+    }
+
+    //user1 data
+    var entry1a = new bank(100, 0, 1000, "2024-01-05", 1000);
+    var entry1b = new bank(100, 0, 1000, "2024-01-10", 2000);
+    var entry1c = new bank(100, 500, 0, "2024-01-15", 1500);
+    var entry1d = new bank(100, 0, 800, "2024-01-17", 2300);
+    var entry1e = new bank(100, 300, 0, "2024-01-23", 2000);
+
+    let user1 = [];
+    user1.push(entry1a, entry1b, entry1c, entry1d, entry1e)
+
+    allusers1.innerHTML = ("user1_data : <br>")
+    for (let i in user1) {
+        allusers1.innerHTML += JSON.stringify(user1[i]) + "<br>"
+    }
+
+    //user2 data
+    var entry2a = new bank(101, 0, 500, "2024-01-02", 500);
+    var entry2b = new bank(101, 0, 2000, "2024-01-07", 2500);
+    var entry2c = new bank(101, 500, 0, "2024-01-10", 2000);
+    var entry2d = new bank(101, 0, 800, "2024-01-13", 2800);
+    var entry2e = new bank(101, 0, 900, "2024-01-25", 2000);
+
+    let user2 = [];
+    user2.push(entry2a, entry2b, entry2c, entry2d, entry2e)
+
+    allusers1.innerHTML += ("<br>user2_data : <br>")
+    for (let i in user2) {
+        allusers1.innerHTML += JSON.stringify(user2[i]) + "<br>"
+    }
+
+
+    //user3 data
+    var entry3a = new bank(102, 0, 1500, "2024-01-06", 1500);
+    var entry3b = new bank(102, 0, 2000, "2024-01-08", 3500);
+    var entry3c = new bank(102, 500, 0, "2024-01-12", 3000);
+    var entry3d = new bank(102, 0, 600, "2024-01-17", 3600);
+    var entry3e = new bank(102, 0, 800, "2024-01-29", 4400);
+
+    let user3 = [];
+    user3.push(entry3a, entry3b, entry3c, entry3d, entry3e)
+
+    allusers1.innerHTML += ("<br>user3_data : <br>")
+    for (let i in user3) {
+        allusers1.innerHTML += JSON.stringify(user3[i]) + "<br>"
+    }
+    //user4 data
+    var entry4a = new bank(103, 0, 300, "2024-01-03", 300);
+    var entry4b = new bank(103, 0, 2000, "2024-01-07", 2300);
+    var entry4c = new bank(103, 0, 500, "2024-01-11", 2800);
+    var entry4d = new bank(103, 200, 0, "2024-01-16", 2600);
+    var entry4e = new bank(103, 600, 0, "2024-01-19", 2000);
+
+
+    let user4 = [];
+    user4.push(entry4a, entry4b, entry4c, entry4d, entry4e)
+
+    allusers2.innerHTML += ("<br>user4_data : <br>")
+    for (let i in user4) {
+        allusers2.innerHTML += JSON.stringify(user4[i]) + "<br>"
+    }
+
+
+    //user4 data
+    var entry5a = new bank(104, 0, 1000, "2024-01-06", 1000);
+    var entry5b = new bank(104, 500, 0, "2024-01-11", 500);
+    var entry5c = new bank(104, 0, 600, "2024-01-14", 1100);
+    var entry5d = new bank(104, 200, 0, "2024-01-19", 900);
+    var entry5e = new bank(104, 0, 1200, "2024-01-29", 2300);
+
+    let user5 = [];
+    user5.push(entry5a, entry5b, entry5c, entry5d, entry5e)
+
+    allusers2.innerHTML += ("<br>user5_data : <br>")
+    for (let i in user5) {
+        allusers2.innerHTML += JSON.stringify(user5[i]) + "<br>"
+    }
+
+
+
+    // ALL USERS DATA IN ONE ARRAY
+
+    var allUsersData = [];
+    allUsersData.push(user1, user2, user3, user4, user5);
+    // console.log(allUsersData)
+
+   
+    //FUNCTION FOR GETTING ALL USER'S ENTRY BETWEEN SPECIFIC RANGE 
+    function show() {
+        var range1 = document.getElementById("d1");
+        var range2 = document.getElementById("d2");
+
+        for (let i in allUsersData) {
+            // console.log(allUsersData[i])
+
+            for (let j in allUsersData[i]) {
+                // console.log((allUsersData[i])[j])
+
+                if ((allUsersData[i])[j].transactionDate >= range1.value && (allUsersData[i])[j].transactionDate <= range2.value) {
+                    let outputQ1 = document.getElementById("outputQ1");
+                    outputQ1.innerHTML += `ACCOUNT_NO :${(allUsersData[i])[j].accountNO}    ,    DEBIT: ${(allUsersData[i])[j].debit} , CREDIT: ${(allUsersData[i])[j].credit} , TRANSACTION_DATE: ${(allUsersData[i])[j].transactionDate}, BALANCE: ${(allUsersData[i])[j].balance} <br> `
+                }
+            }
+        }
+    }
+
+//FUNCTION FOR GETTING PERTICULAR USER'S ENTRY BETWEEN SPECIFIC RANGE
+    function show1(){
+        
+    var date1 = document.getElementById("date1")
+    var date2 = document.getElementById("date2")
+    var accoNO = document.getElementById("accNo")
+
+    for( let i in allUsersData){
+        // console.log(allUsersData[i])
+
+        for(let j in allUsersData[i]){
+            if((allUsersData[i])[j].transactionDate >= date1.value && (allUsersData[i])[j].transactionDate <= date2.value){
+                if((allUsersData[i])[j].accountNO == accoNO.value){
+                    outputQ2.innerHTML += `ACCOUNT_NO :${(allUsersData[i])[j].accountNO}    ,    DEBIT: ${(allUsersData[i])[j].debit} , CREDIT: ${(allUsersData[i])[j].credit} , TRANSACTION_DATE: ${(allUsersData[i])[j].transactionDate}, BALANCE: ${(allUsersData[i])[j].balance} <br> `
+                }
+            }
+        }
+    }
+    }
+  
+</script>

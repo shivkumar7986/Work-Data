@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="o">
+        
+    </div>
+    <script>
+
+        function demo(data){
+            console.log(data)
+
+            var t = `<table border = 2><th>Image <th>Category <th>Title <th>Price <th> Description <th> Rating`;
+
+                for(let i in data.products){
+                    // console.log(data.products[i])
+
+                    t += `<tr><th><image src = ${data.products[i].images[0]} width = 80 height = 80> <th> ${data.products[i].category} <th> ${data.products[i].title} <th> ${data.products[i].price} <th>  ${data.products[i].description} <th> ${data.products[i].rating }`
+                }
+
+                t += `</table>`;
+                o.innerHTML = t
+        }
+
+        
+
+
+        fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(data => demo(data));
+    </script>
+</body>
+</html>

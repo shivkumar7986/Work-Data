@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This sets the character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Double Drop Down Example</h1> <!-- Main heading of the page -->
+<h2>Select Country</h2> <!-- Subheading for the first dropdown -->
+
+<!-- Country Drop Down -->
+<label for="country">Country: </label>
+<select id="country" onchange="show()">
+    <!-- The 'onchange' event will trigger the 'show()' function when a country is selected -->
+
+    <!-- Default option prompting the user to select a country -->
+    <option value="">Select a country</option>
+    <!-- Option for the USA -->
+    <option value="usa">USA</option>
+    <!-- Option for India -->
+    <option value="india">India</option>
+</select>
+<br><br> <!-- Line breaks for spacing -->
+
+<!-- State Drop Down -->
+<label for="state">State: </label>
+<select id="state">
+    <!-- Default option prompting the user to select a state -->
+    <option value="">Select a state</option>
+</select>
+
+<script>
+    // Data object storing lists of states for each country
+    let data = {
+        usa: ["California", "Texas", "New York", "Florida"],
+        india: ["Punjab", "Delhi", "Haryana", "UP"]
+    };
+
+    // Function that populates the state dropdown based on the selected country
+    function show() {
+        // Get the selected country from the dropdown
+        const countrySelect = document.getElementById("country");
+        const stateSelect = document.getElementById("state");
+        const selectedCountry = countrySelect.value;
+
+        // Clear any existing options in the state dropdown
+        stateSelect.innerHTML = '<option value="">Select a state</option>';
+
+        // If a country is selected, populate the state dropdown with relevant options
+        if (selectedCountry) {
+            // Get the list of states for the selected country
+            const selectedStates = data[selectedCountry];
+            let options = ""; // Initialize an empty string to hold the options
+
+            // Loop through the list of states and create an option for each
+            for (let state in selectedStates) {
+                options += <option value="${selectedStates[state].toLowerCase()}">${selectedStates[state]}</option>;
+            }
+
+            // Add the created options to the state dropdown
+            stateSelect.innerHTML += options;
+        }
+    }
+</script>
+
+</body>
+</html>

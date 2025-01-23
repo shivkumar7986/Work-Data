@@ -1,0 +1,61 @@
+/* Header */
+.header1 {
+    background: #222;
+    padding: 1vw 2vw;
+    position: fixed;
+    
+    width: 100%;
+    z-index: 1000;
+    display: flex; 
+    justify-content: space-between;
+  
+  }
+  
+  .header1 .logo {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .header1 .logo .sitename {
+    font-weight: 700;
+  }
+  
+  .header1 .navmenu ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+  }
+  
+  .header1 .navmenu ul li {
+    margin-left: 20px;
+  }
+  
+  .header1 .navmenu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .header1 .navmenu ul li a:hover {
+    color: #ff5e57;
+  }
+  
+  .mobile-nav-toggle {
+    display: none;
+  }
+  
+  .logout-button {
+    background: none;
+    border: none;
+    color: #ff6f61; /* Match your theme color */
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.logout-button:hover {
+    color: #e65a4f;
+}

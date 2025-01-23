@@ -1,0 +1,53 @@
+ - SYNC AND ASYNC ?
+
+   : sync matlab ek ke baad dusra hoga, jab tak ek command complete naa ho, dusra nahi hoga.
+
+	task a - 5
+	task b - 2
+	task c - 15
+	task d - 1
+	
+	total time take for complete all the task : 23s
+	
+   : async matalb saare kaam ek saath shuru kardo, jiska answer pahle aajaye uska jawab dedena.
+
+	task a - 5
+	task b - 2
+	task c - 15
+	task d - 1
+	
+	total time take for complete all the task : 15s
+
+ -------------------------------------------------------   
+
+ - KAISE PATA CHALTA HAI KI HUM SYNC CODE LIKH REHE YA  ASYNC? 
+ 
+ -async code contain : setTimeout , setInterval , promises , fetch
+
+ -async js hai kya? 
+  : kai baar apka final code depended hota hai ksis aur ke server per, is case mein humein nahi pata hota ki answer uske server se kab laut ker aayega, to hum kya nahi kr skte is writing sync code, isse nipatne ke liye hum log async code likh dete hai taki blocking naa ho and jab bhi answer aaye humara answer ke respect mein chlne wala code chal jayee.
+
+  async code ka main motive hota hai ki un cases mein jinme hume pata nahi code ka asnwer kitni der me aayega to jab bhi answer aa jaye uske answer ke respect me koi particular code chala dena.
+
+  ex: facebook se photo laao aur jab photo aaye show ker dena.
+
+  ---------------------------------------------------------
+
+  MAIN STACK : main stack me sare syncronous code contain hoke execute hote hai.
+
+  SIDE STACK : side stack me asncronous code ko rakhte hai ,  main stack khali hone ke baad hi side stack se ready data ko main stack me bejte hai or execute hote hai.
+
+	console.log("hey)
+	console.log("hey2)
+	setTimeout(()=>{
+		console.log("hey3)
+	} , 0)
+	console.log("hey4)
+
+  EVENT LOOP : event loop main stack khali hone ke baad side stact ko chet kerta hai ,  ager ss me kuch hota hai to wo use pucta hai kaam ho gya , ager ho gya to use wo ss se ms me le jata hai fir execute hots hai ,
+
+  JS IS ASYNCRONOUS : no js is syncronous, js i single threading  , execute code one by one but fast
+
+---------------------------------------------------------
+
+ASYNC AND AWAITS: koi bhi esa function jisme aap async code likhenge, kyouki async code hai to aap promises ka instemal kar sakte hai , jab uska answer aayega aapko then lana pdega, us then ko lagaane se bachne ke liye , aap async await ka istemaal ker sakte hai.

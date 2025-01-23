@@ -1,0 +1,23 @@
+
+<div id="output">
+
+</div>
+<script>
+
+    async function show() {
+        let rowData = await fetch('http://localhost:3000');
+        let data = await rowData.json();
+        console.log(data)
+        var table = `<table border = 1><tr><th>Id <th>Product <th>Price`
+        data.map(items => {
+            table += `<tr>
+                    <td>${items.id}</td>
+                    <td>${items.product}</td>
+                    <td>${items.price}</td>
+                     </tr>`
+        })
+        table += `</table>`;
+        output.innerHTML = table
+    }
+    show()
+</script>

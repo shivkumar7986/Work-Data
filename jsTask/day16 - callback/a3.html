@@ -1,0 +1,25 @@
+<div id="o">
+
+</div>
+
+<script>
+
+    function fetchData(demo) {
+        fetch('https://dummyjson.com/products')
+            .then(res => res.json())
+            .then(data => demo(data));
+    }
+    var s = `<table><tr><td>IMAGE <td>TITLE <td>BRAND <td>PRICE`
+
+    function dispData(data) {
+        console.log(data)
+        for (let i in data.products) {
+            console.log(data.products[i])
+            s += `<tr><td><img src= ${data.products[i].images[0]} height = 80 width= 80> <td>${data.products[i].title} <td>${data.products[i].brand} <td>${data.products[i].price}`
+        }
+
+        s += `</table>`
+        o.innerHTML = s
+    }
+    fetchData(dispData)
+</script>

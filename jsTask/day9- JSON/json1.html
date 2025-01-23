@@ -1,0 +1,21 @@
+<script type="text/javascript" src="./data.json"> </script>
+    <script>
+
+        var myData = JSON.parse(data);
+
+        console.log(myData)
+
+        for(let i in myData){
+            console.log(myData[i])
+            document.write(myData[i].id +" - " + myData[i].name  + " : " + myData[i].price + "<br>")
+        }
+       
+        
+   
+
+    </script>
+
+
+    
+
+
